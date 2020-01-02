@@ -4,6 +4,7 @@ import MyPlants from "./MyPlants";
 import MyTasks from "./MyTasks";
 import Menu from "./Menu";
 import Notification from "./Notification";
+import AddPlant from "./AddPlant"
 
 const Dashboard = () => {
     return(
@@ -12,6 +13,7 @@ const Dashboard = () => {
             <Notification/>
             <MyPlants/>
             <MyTasks/>
+            <AddPlant/>
         </div>
     )
 }
