@@ -1,24 +1,72 @@
 .landing {
   display: flex;
+  flex-wrap: wrap;
   .landingBody {
+    display:flex;
+    width: 100%;
+    div {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      h1 {
+        /* Headline 1/Regular */
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+        letter-spacing: 0.08em;
+
+        /* Text1 */
+        color: #212429;
+
+        text-align: center;
+      }
+      h1.greenheader {
+        /* Headline 1/Regular */
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+        letter-spacing: 0.08em;
+
+        /* Text1 */
+        color: #397D54;
+
+        text-align: center;
+      }
+      h3 {
+
+      }
+    }
     .signin {
-    /* Button Text */
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.08em;
+      /* Button Text */
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.08em;
 
-    /* Background color */
-    color: #F8F6F5;
+      /* Background color */
+      color: #F8F6F5;
 
-    /* Primary Color */
-    background: #397D54;
-    border-radius: 4px;
+      /* Primary Color */
+      background: #397D54;
+      border-radius: 4px;
+    }
+    img {
+      width: 50%;
     }
   }
 }
