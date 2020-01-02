@@ -16,7 +16,7 @@ const MyTasks = () => {
 
     return(
         <div>
-            {tasks && tasks.length ? tasks.map(task => {
+            {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
                 <div>
                     <h3>{task.title}</h3>
