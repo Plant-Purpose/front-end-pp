@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 
 const Menu = () => {
-  const [date, setDate] = useState({ date: '' })
-
-	const handleChange = e => {
-		setDate({
-			...date,
-			[e.target.name]: e.target.value
-		});
-	};
+ 
 
   return (
     <>
@@ -22,12 +15,7 @@ const Menu = () => {
         <div> <img src='images/Menu/myplants.svg'/> My Plants </div>
         <div> <img src='images/Menu/tasks.svg'/> Tasks </div>
         <div> <img src='images/Menu/notes.svg'/> Notes </div>
-        <input
-          type='date'
-          name='date'
-          value={date.date}
-          onChange={handleChange}
-        />
+        
       </div>
 
       <div>

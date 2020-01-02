@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <>
 
-      <div className='landingLandingButtons'>
+      <div className='landingNavButtons'>
         <button> Sign In </button>
         <button> Sign Up </button>
       </div>

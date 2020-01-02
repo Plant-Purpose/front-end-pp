@@ -1,22 +1,21 @@
 import React, {useState} from 'react';
 import axiosAuth from "../util/authAxios";
+import { validateUser } from '../util/formValidation/validateUser'
+import { useForm } from '../util/useForm'
 
+const initialState = {
+    email: '',
+    password: ''
+}
 
 const Login = (props) => {
-    const [user, setUser] = useState({
-        email: '',
-        password: ''
-    });
+    const { values: user, handleChange, errors, handleSubmit } = useForm(
+        initialState,
+        validateUser,
+        submit
+    )
 
-    const handleChange = e => {
-        setUser({
-            ...user,
-            [e.target.name]: e.target.value
-        })
-    };
-    console.log(user);
-
-    const handleSubmit = e => {
+    function submit(e) {
         e.preventDefault();
         axiosAuth()
         .post('/api/login', user)
@@ -32,8 +31,14 @@ const Login = (props) => {
         return (
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email: </label><input type="text" name="email" onChange={handleChange}/> 
-                    <label htmlFor="password">Password: </label><input type="password" name="password" onChange={handleChange}/> 
+                    <label htmlFor="email">Email: </label>
+                    <input type="text" name="email" onChange={handleChange}/> 
+                    <p className='error-text'>{errors.email}</p>
+
+                    <label htmlFor="password">Password: </label>
+                    <input type="password" name="password" onChange={handleChange}/> 
+                    <p className='error-text'>{errors.password}</p>
+
                     <button type='submit'>Login</button>
                 </form>
             </div>
