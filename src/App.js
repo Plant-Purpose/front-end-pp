@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 import ProtectedRoute from "./util/ProtectedRoute";
 import Login from "./components/Login";
@@ -13,10 +13,12 @@ function App() {
 	return (
 		<div className='App'>
 			<Nav/>
-			<LandingPage/>
-			<Route exact path='/register' render={props => <Register {...props} />} />
-			<Route exact path='/login' render={props => <Login {...props} />} />
-			<Route exact path="/dashboard" component={Dashboard}/>
+			<Switch>
+				<Route exact path='/' component={LandingPage} />
+				<Route exact path='/register' render={props => <Register {...props} />} />
+				<Route exact path='/login' render={props => <Login {...props} />} />
+				<Route exact path="/dashboard" component={Dashboard}/>
+			</Switch>
 		</div>
 	);
 }
