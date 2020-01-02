@@ -132,6 +132,8 @@ table {
 .nav .mainNav {
   width: 50%;
   display: flex;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
 }
 .nav .mainNav img {
   justify-content: flex-start;
@@ -139,6 +141,10 @@ table {
 .nav .button {
   width: 50%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 2rem;
 }
 .nav .button .loggedInButts {
   display: flex;
@@ -182,9 +188,49 @@ table {
   /* Primary Color */
   background: #397D54;
   border-radius: 4px;
+  margin-right: 1rem;
 }
 .landing {
   display: flex;
+  flex-wrap: wrap;
+}
+.landing .landingBody {
+  display: flex;
+  width: 100%;
+}
+.landing .landingBody div {
+  width: 50%;
+  margin: auto;
+}
+.landing .landingBody div h1 {
+  /* Headline 1/Regular */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  letter-spacing: 0.08em;
+  /* Text1 */
+  color: #212429;
+  text-align: center;
+}
+.landing .landingBody div h3 {
+  /* Headline 1/Regular */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  letter-spacing: 0.08em;
+  /* Text1 */
+  color: #212429;
+  text-align: center;
 }
 .landing .landingBody .signin {
   /* Button Text */
@@ -202,4 +248,7 @@ table {
   /* Primary Color */
   background: #397D54;
   border-radius: 4px;
+}
+.landing .landingBody img {
+  width: 50%;
 }

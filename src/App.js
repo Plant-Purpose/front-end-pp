@@ -10,6 +10,7 @@ import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AddPlant from "./components/AddPlant";
+import AddTask from "./components/AddPlant"
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 				<Route exact path='/login' render={props => <Login {...props} />} />
 				<Route exact path="/dashboard" component={Dashboard}/>
 				<Route exact path='/add-plant' render={props => <AddPlant {...props} />} />
+				<Route exact path='/add-task' render={props => <AddTask {...props} />} />
 			</Switch>
 		</div>
 	);
