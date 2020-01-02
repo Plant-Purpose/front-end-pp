@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import authAxios from "../../util/authAxios";
-import plantAPI from "../../util/plantapi"
+import plantAPI from "../../util/plantapi.js"
 
 
 const MyPlants = () => {
