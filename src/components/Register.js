@@ -1,7 +1,8 @@
 import React from 'react';
 import axiosAuth from "../util/authAxios";
 import { validateUser } from '../util/formValidation/validateUser'
-import { useForm } from '../util/useForm'
+import { useForm } from '../util/useForm';
+import axios from "axios";
 
 const initialState = {
   full_name: '',
@@ -22,7 +23,7 @@ const Register = props => {
   
   function submit() {
     console.log(user)
-    axiosAuth()
+    axios
     .post('https://plant-purpose.herokuapp.com/api/auth/register', user)
     .then(res => {
       localStorage.setItem('token', res.data.token)
