@@ -6,6 +6,7 @@ export function getToken() {
 
 export default function() {
     return axios.create({
+        baseUrl: "https://plant-purpose.herokuapp.com/",
         headers: {
             Authorization: getToken(),
         }
