@@ -190,3 +190,159 @@ table {
   border-radius: 4px;
   margin-right: 1rem;
 }
+.landing {
+  display: flex;
+  flex-wrap: wrap;
+}
+.landing .landingBody {
+  display: flex;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 38rem;
+}
+.landing .landingBody div {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.landing .landingBody div h1 {
+  /* Headline 1/Regular */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  letter-spacing: 0.08em;
+  /* Text1 */
+  color: #212429;
+  text-align: center;
+  justify-content: center;
+}
+.landing .landingBody div h1.greenheader {
+  /* Headline 1/Regular */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  letter-spacing: 0.08em;
+  /* Text1 */
+  color: #397D54;
+  text-align: center;
+}
+.landing .landingBody div h3 {
+  /* Headline 3/Regular */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: right;
+  letter-spacing: 0.08em;
+  padding: 5rem;
+  /* Text2 */
+  color: #495057;
+  text-align: center;
+}
+.landing .landingBody button.signin {
+  /* Button Text */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  /* Background color */
+  color: #F8F6F5;
+  /* Primary Color */
+  background: #397D54;
+  border-radius: 4px;
+  margin: auto;
+}
+.landing .landingBody img {
+  width: 50%;
+}
+.landing .landingFeatures {
+  display: flex;
+  background: #F8F6F5;
+  height: 38rem;
+}
+@media (max-width:1000px) {
+  .landing .landingFeatures img.sideLeaf {
+    width: 5rem;
+  }
+}
+@media (max-width:800px) {
+  .landing .landingFeatures img.sideLeaf {
+    display: none;
+  }
+}
+.landing .landingFeatures div {
+  margin: auto;
+}
+.landing .landingFeatures div h6 {
+  /* Headline 3/Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+  color: #000000;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.landing .landingFeatures div p {
+  /* Headline 4/Regular */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+  color: #000000;
+  justify-content: center;
+}
+.landing .landingContact {
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.landing .landingContact .socialApps {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.landing .landingContact .terms {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.landing .landingContact .terms p {
+  margin-bottom: 1rem;
+}

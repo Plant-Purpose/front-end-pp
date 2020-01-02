@@ -14,7 +14,7 @@
       justify-content: center;
       h1 {
         /* Headline 1/Regular */
-        font-family: Poppins;
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -31,7 +31,7 @@
       }
       h1.greenheader {
         /* Headline 1/Regular */
-        font-family: Poppins;
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -82,6 +82,7 @@
       border-radius: 4px;
 
       margin: auto;
+
     }
     img {
       width: 50%;
@@ -91,6 +92,14 @@
     display: flex;
     background: #F8F6F5;
     height: 38rem;
+    img.sideLeaf {
+      @media @large {
+        width: 5rem;
+      }
+      @media @small {
+        display: none;
+      }
+    }
     div {
       margin: auto;
       h6 {
@@ -136,12 +145,20 @@
     margin-bottom: 4rem;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     .socialApps {
+      display:flex;
+      justify-content: space-evenly;
       width: 100%;
-      margin-right: 2rem;
-    }
-    .terms {
+      margin-bottom: 2rem;   }
+    .terms { 
       width: 100%;
-    }
+
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      p {
+        margin-bottom: 1rem;
+      }    }
   }
 }

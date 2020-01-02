@@ -4,22 +4,26 @@ import { validateUser } from '../util/formValidation/validateUser'
 import { useForm } from '../util/useForm'
 
 const initialState = {
+  full_name: '',
   email: '',
-  password: ''
+  password: '',
+  phone: '',
+  location: ''
 }
 
 const Register = props => {
+
+
   const { values: user, handleChange, errors, handleSubmit } = useForm(
     initialState,
     validateUser,
     submit
 )
-console.log(user)
   
-  function submit(e) {
-    e.preventDefault();
+  function submit() {
+    console.log(user)
     axiosAuth()
-    .post('https://plant-purpose.herokuapp.com/api/register', user)
+    .post('https://plant-purpose.herokuapp.com/api/auth/register', user)
     .then(res => {
       localStorage.setItem('token', res.data.token)
       props.history.push('/dashboard')
@@ -30,10 +34,18 @@ console.log(user)
   }
 
   return (
-    <>
-    <form  onSubmit={submit}>
+    <>    
       <h1> Register </h1>
-      <label htmlFor="email">E: </label>
+      <form  onSubmit={handleSubmit}>
+      <label htmlFor="name">Name: </label>
+      <input
+        type='text' 
+        name='full_name' 
+        placeholder='Name'
+        value={user.name}
+        onChange={handleChange}
+      />
+      <label htmlFor="email">Email: </label>
       <input
         type='email' 
         name='email' 
@@ -43,7 +55,7 @@ console.log(user)
       />
       <p id='error-text'>{errors.email}</p>
 
-      <label htmlFor="password">P: </label>
+      <label htmlFor="password">Password: </label>
       <input
         type='password' 
         name='password' 
@@ -52,6 +64,22 @@ console.log(user)
         onChange={handleChange}
       />
       <p id='error-text'>{errors.password}</p>
+      <label htmlFor="phone">Phone: </label>
+      <input
+        type='phone' 
+        name='phone' 
+        placeholder='Phone'
+        value={user.phone}
+        onChange={handleChange}
+      />
+       <label htmlFor="location">Location: </label>
+      <input
+        type='text' 
+        name='location' 
+        placeholder='Location'
+        value={user.location}
+        onChange={handleChange}
+      />
 
       <button type='submit'> Register </button>
       </form>

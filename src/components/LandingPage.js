@@ -17,19 +17,19 @@ const LandingPage = (props) => {
       </div>
 
       <div className='landingFeatures'>
-        <img src="images/Landing/landingFeature.svg" alt="home page feature plant"/>
+        <img className='sideLeaf' src="images/Landing/landingFeature.svg" alt="home page feature plant"/>
         <div>
-          <img src="images/Landing/landingFeat1.svg" alt="home page feature 1"/>
+          <img className='featureImg' src="images/Landing/landingFeat1.svg" alt="home page feature 1"/>
           <h6> Feature One Details </h6>
           <p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
         </div>
         <div>
-          <img src="images/Landing/landingFeat2.svg" alt="home page feature 2"/>
+          <img className='featureImg' src="images/Landing/landingFeat2.svg" alt="home page feature 2"/>
           <h6> Feature Two Details </h6>
           <p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
         </div>
         <div>
-          <img src="images/Landing/landingFeat3.svg" alt="home page feature 3"/>  
+          <img className='featureImg' src="images/Landing/landingFeat3.svg" alt="home page feature 3"/>  
           <h6> Feature Three Details </h6>
           <p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
         </div>
@@ -42,8 +42,8 @@ const LandingPage = (props) => {
           <img src="images/Landing/Instagram.svg" alt="instagram link"/>
         </div>
         <div className='terms'>
-          <p> Privacy Policy </p>
-          <p> Terms of Use </p>
+          <p> Privacy Policy   </p>
+          <pre><p>   |   Terms of Use   |   </p></pre>
           <p> Contact Us </p>
         </div>
       </div>

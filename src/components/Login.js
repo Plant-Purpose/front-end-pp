@@ -15,8 +15,7 @@ const Login = (props) => {
         submit
     )
 
-    function submit(e) {
-        e.preventDefault();
+    function submit() {
         axiosAuth()
         .post('/api/login', user)
         .then(response => {
