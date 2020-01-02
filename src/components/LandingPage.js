@@ -1,12 +1,18 @@
 import React from 'react';
 
+
 const LandingPage = () => {
 
   return (
     <>
-      <a href="https://INSERTPLANTWEBSITEHERE.now.sh" target="_blank">
-        <img src="images/Nav/leaf.svg" alt="picture of leaf" />
-      </a>
+      <button> Sign In </button>
+      <button> Sign Up </button>
+      <h1> Welcome to Plant Purpose </h1>
+      <h3> A plant managment service, which helps plant owners take better care of their plants </h3>
+      <button> Sign Up Now </button>
+
     </>
   )
 }
+
+export default LandingPage;
