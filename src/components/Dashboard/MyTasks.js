@@ -23,7 +23,11 @@ const MyTasks = () => {
                     <p>{task.task}</p>
                     <p>{task.deadline}</p>
                 </div>
-            )}):null }
+            )}):
+            <div>
+                <h2>My Tasks</h2>
+                <p>You have no tasks at this time.</p>
+            </div> }
         </div>
 
     )
