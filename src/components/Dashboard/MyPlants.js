@@ -30,9 +30,18 @@ const MyPlants = () => {
 
     return(
         <div>
-            <h1>My Plants</h1>
-            <img src="" alt=''/>
-            <p>{plantname}</p>
+            {plants && plants.length ? plants.map(plant => {
+                return(
+                    <div>
+                        <h1>My Plants</h1>
+                        <img src="" alt=''/>
+                        <p>{plant}</p>
+                    </div>
+
+                )
+            }): null}
+            
         </div>
     )
 }
+export default MyPlants;

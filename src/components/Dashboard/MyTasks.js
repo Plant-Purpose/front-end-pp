@@ -15,6 +15,17 @@ const MyTasks = () => {
         }, [tasks])
 
     return(
-        
+        <div>
+            {tasks && tasks.length ? tasks.map(task => {
+                return(
+                <div>
+                    <h3>{task.title}</h3>
+                    <p>{task.task}</p>
+                    <p>{task.deadline}</p>
+                </div>
+            )}):null }
+        </div>
+
     )
 }
+export default MyTasks;
