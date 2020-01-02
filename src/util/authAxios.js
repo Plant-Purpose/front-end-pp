@@ -7,7 +7,7 @@ export function getToken() {
 export default function() {
     return axios.create({
         headers: {
-            Authorization: getToken();
+            Authorization: getToken(),
         }
     })
 }
