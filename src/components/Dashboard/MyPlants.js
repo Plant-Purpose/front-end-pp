@@ -20,7 +20,7 @@ const MyPlants = () => {
                 setPlants(response.data)
             })
             .catch(error => {
-                console.log(error);
+                console.dir(error);
             })
         })
         .catch(error => {
@@ -30,7 +30,7 @@ const MyPlants = () => {
 
     return(
         <div>
-            {plants && plants.length ? plants.map(plant => {
+            {plants && plants.length !==0 ? plants.map(plant => {
                 return(
                     <div>
                         <h1>My Plants</h1>
