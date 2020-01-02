@@ -134,4 +134,5 @@ table {
 }
 .landing .landingNavButtons {
   width: 50%;
+  justify-content: flex-end;
 }

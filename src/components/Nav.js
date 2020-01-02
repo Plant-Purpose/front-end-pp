@@ -1,8 +1,6 @@
 import React from 'react'
 
 const Nav = () => {
-    const [isLogged, setIsLog]
-
     const signedIn = localStorage.getItem('token');
     return(
         <div>

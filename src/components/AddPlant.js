@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import authAxios from "../util/authAxios";
 
-constAddPlant = () => {
+const AddPlant = () => {
     const [plant, setPlant] = useState({
         
     })
@@ -16,6 +16,7 @@ constAddPlant = () => {
     const handleSubmit = e => {
         e.preventDefault();
         authAxios()
-        .post
+        .post('api/users/:id/plants', plant)
+        .then()
     }
 }
