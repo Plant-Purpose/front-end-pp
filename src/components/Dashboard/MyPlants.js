@@ -14,14 +14,14 @@ const MyPlants = () => {
         .get('api/users/:id/plants')
         .then(response => {
             setPlantId(response.data);
-            // plantAPI()
-            // .get('https://trefle.io/api/plants/{id}', plantid.id)
-            // .then(response => {
-            //     setPlants(response.data)
-            // })
-            // .catch(error => {
-            //     console.dir(error);
-            // })
+            plantAPI()
+            .get('https://trefle.io/api/plants/{id}', plantid.id)
+            .then(response => {
+                setPlants(response.data)
+            })
+            .catch(error => {
+                console.dir(error);
+            })
         })
         .catch(error => {
             console.log(error);
