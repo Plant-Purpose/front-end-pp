@@ -16,7 +16,7 @@ const MyTasks = () => {
 
     return(
         <div>
-            {tasks && tasks.length !== 0 ? tasks.map(task => {
+            {/* {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
                 <div>
                     <h3>{task.title}</h3>
@@ -24,10 +24,10 @@ const MyTasks = () => {
                     <p>{task.deadline}</p>
                 </div>
             )}):
-            <div>
+            <div> */}
                 <h2>My Tasks</h2>
                 <p>You have no tasks at this time.</p>
-            </div> }
+            {/* </div> } */}
         </div>
 
     )
