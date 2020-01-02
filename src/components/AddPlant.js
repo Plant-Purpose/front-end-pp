@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import authAxios from "../util/authAxios";
-import plantAPI from "../util/plantAPI.js"
+// import plantAPI from "../util/plantAPI.js"
 
 import AddTask from "./AddTask"
 
@@ -30,18 +30,18 @@ const AddPlant = (props) => {
         })
     }
 
-    const handleSearch = e => {
-        e.preventDefault();
-        plantAPI()
-        .get(`api/plants/`,
-         {"common_name": plant.common_name})
-        .then(response => {
-            setPlant(response.data)
-        })
-        .catch(error => {
-            console.dir(error)
-        })
-    }
+    // const handleSearch = e => {
+    //     e.preventDefault();
+    //     plantAPI()
+    //     .get(`api/plants/`,
+    //      {"common_name": plant.common_name})
+    //     .then(response => {
+    //         setPlant(response.data)
+    //     })
+    //     .catch(error => {
+    //         console.dir(error)
+    //     })
+    // }
 
     return(
         <div>

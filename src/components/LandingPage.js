@@ -8,7 +8,8 @@ const LandingPage = () => {
 
       <div className='landingBody'>
         <div>
-          <h1> Welcome to Plant Purpose </h1>
+          <h1> Welcome to  </h1>
+          <h1 className='greenheader'> Plant Purpose </h1>
           <h3> A plant managment service, which helps plant owners take better care of their plants </h3>
           <button className='signin'> Sign Up Now </button>
         </div>
