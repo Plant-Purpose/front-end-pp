@@ -9,7 +9,7 @@ const LandingPage = () => {
       <div className='landingBody'>
         <h1> Welcome to Plant Purpose </h1>
         <h3> A plant managment service, which helps plant owners take better care of their plants </h3>
-        <button> Sign Up Now </button>
+        <button className='signin'> Sign Up Now </button>
         <img src="images/Landing/landingBody.svg" alt="home page plant picture"/>
       </div>
 

@@ -126,13 +126,80 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.mainNav {
+.nav {
+  display: flex;
+}
+.nav .mainNav {
   width: 50%;
+  display: flex;
+}
+.nav .mainNav img {
+  justify-content: flex-start;
+}
+.nav .button {
+  width: 50%;
+  display: flex;
+}
+.nav .button .loggedInButts {
+  display: flex;
+}
+.nav .button .loggedInButts button {
+  justify-content: flex-end;
+}
+.nav .button .loggedOutButts {
+  display: flex;
+}
+.nav .button .loggedOutButts .signup {
+  /* Button Text */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  /* Text2 */
+  color: #495057;
+  /* Secondary Color */
+  background: #E4D5C7;
+  border-radius: 4px;
+}
+.nav .button .loggedOutButts .signin {
+  /* Button Text */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  /* Background color */
+  color: #F8F6F5;
+  /* Primary Color */
+  background: #397D54;
+  border-radius: 4px;
 }
 .landing {
   display: flex;
 }
-.landing .landingNavButtons {
-  width: 50%;
-  justify-content: flex-end;
+.landing .landingBody .signin {
+  /* Button Text */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  /* Background color */
+  color: #F8F6F5;
+  /* Primary Color */
+  background: #397D54;
+  border-radius: 4px;
 }

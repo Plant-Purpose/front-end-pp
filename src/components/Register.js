@@ -40,7 +40,7 @@ const Register = props => {
         value={user.email}
         onChange={handleChange}
       />
-      <p className='error-text'>{errors.email}</p>
+      <p id='error-text'>{errors.email}</p>
 
       <label htmlFor="password">P: </label>
       <input
@@ -50,7 +50,7 @@ const Register = props => {
         value={user.password}
         onChange={handleChange}
       />
-      <p className='error-text'>{errors.password}</p>
+      <p id='error-text'>{errors.password}</p>
 
       <button type='submit'> Register </button>
       </form>

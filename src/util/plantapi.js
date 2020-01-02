@@ -4,9 +4,7 @@ import axios from "axios";
 
 export default function() {
     return axios.create({        
-        baseUrl: 'https://trefle.io/',
-        headers: {
-            Authorization: 'elpiZ21wT1JXZFVzemlubmx0VlRJZz09'
-        }
+        baseURL: 'https://trefle.io/api/auth/claim?token=YOUR-TOKEN&origin=YOUR-WEBSITE-URL',
+        
     })
 }

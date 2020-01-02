@@ -9,6 +9,7 @@ import Register from "./components/Register";
 import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 import Dashboard from "./components/Dashboard/Dashboard";
+import AddPlant from "./components/AddPlant";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route exact path='/register' render={props => <Register {...props} />} />
 				<Route exact path='/login' render={props => <Login {...props} />} />
 				<Route exact path="/dashboard" component={Dashboard}/>
+				<Route exact path='/add-plant' render={props => <AddPlant {...props} />} />
 			</Switch>
 		</div>
 	);
