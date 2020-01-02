@@ -1,42 +1,57 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import axiosAuth from "../util/authAxios";
+import { validateUser } from '../util/formValidation/validateUser'
+import { useForm } from '../util/useForm'
+
+const initialState = {
+  email: '',
+  password: ''
+}
 
 const Register = props => {
-
-  const [state, setState] = useState({
-    email: '',
-    password: '',
-  });
-
-  const onChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]:e.target.value,
-    })
-  }
+  const { values: user, handleChange, errors, handleSubmit } = useForm(
+    initialState,
+    validateUser,
+    submit
+)
   
-  const onSubmit = (e) => {
+  function submit(e) {
     e.preventDefault();
-    props.registerUser(state, props);
+    axiosAuth()
+    .post('/api/register', user)
+    .then(res => {
+      localStorage.setItem('token', res.data.token)
+      props.history.push('/dashboard')
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   return (
     <>
-    <form  onSubmit={onSubmit}>
+    <form  onSubmit={handleSubmit}>
       <h1> Register </h1>
+      <label htmlFor="email">E: </label>
       <input
         type='email' 
         name='email' 
         placeholder='E-mail'
-        value={props.email}
-        onChange={onChange}
+        value={user.email}
+        onChange={handleChange}
       />
+      <p className='error-text'>{errors.email}</p>
+
+      <label htmlFor="password">P: </label>
       <input
         type='password' 
         name='password' 
         placeholder='Password'
-        value={props.password}
-        onChange={onChange}
+        value={user.password}
+        onChange={handleChange}
       />
+      <p className='error-text'>{errors.password}</p>
+
       <button type='submit'> Register </button>
       </form>
     </>

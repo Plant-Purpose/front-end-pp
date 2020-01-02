@@ -4,12 +4,7 @@ import React from 'react';
 const LandingPage = () => {
 
   return (
-    <>
-
-      <div className='landingNavButtons'>
-        <button> Sign In </button>
-        <button> Sign Up </button>
-      </div>
+    <div className='landing'>
 
       <div className='landingBody'>
         <h1> Welcome to Plant Purpose </h1>
@@ -40,7 +35,8 @@ const LandingPage = () => {
         <p> Terms of Use </p>
         <p> Contact Us </p>
       </div>
-    </>
+
+    </div>
   )
 }
 

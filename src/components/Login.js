@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import axiosAuth from "../util/authAxios";
 import { validateUser } from '../util/formValidation/validateUser'
 import { useForm } from '../util/useForm'
@@ -31,12 +31,24 @@ const Login = (props) => {
         return (
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email: </label>
-                    <input type="text" name="email" onChange={handleChange}/> 
+                    <label htmlFor="email">E: </label>
+                    <input 
+                        type="text" 
+                        name="email" 
+                        placeholder='E-mail'
+                        value={user.email}
+                        onChange={handleChange}
+                    /> 
                     <p className='error-text'>{errors.email}</p>
 
-                    <label htmlFor="password">Password: </label>
-                    <input type="password" name="password" onChange={handleChange}/> 
+                    <label htmlFor="password">P: </label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder='Password'
+                        value={user.password}
+                        onChange={handleChange}
+                    /> 
                     <p className='error-text'>{errors.password}</p>
 
                     <button type='submit'>Login</button>
