@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import authAxios from "../../util/authAxios";
-import plantAPI from "../../../src/util/plantapi.js"
+import plantAPI from "../../../src/util/plantapi.js";
+import axios from "axios";
 
 
 const MyPlants = () => {
@@ -14,8 +15,8 @@ const MyPlants = () => {
         .get('api/users/:id/plants')
         .then(response => {
             setPlantId(response.data);
-            plantAPI()
-            .get('https://trefle.io/api/plants/{id}', plantid.id)
+            axios
+            .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
             .then(response => {
                 setPlants(response.data)
             })

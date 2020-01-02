@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Nav = () => {
-    const signedIn = localStorage.getItem('token');
+
+const Nav = (props) => {
+    const signedIn = localStorage.getItem('token');    
     return(
         <div className='nav'>
 
@@ -17,8 +18,8 @@ const Nav = () => {
                 </div>
                 :
                 <div className="loggedOutButts">
-                    <button className='signin'> Sign In </button>
-                    <button className='signup'> Sign Up </button>
+                    <button className='signin' onClick={() => props.history.push('/login')}> Sign In</button>
+                    <button className='signup' onClick={() => props.history.push('/register')}> Sign Up </button>
                 </div>
                 }     
             </div>

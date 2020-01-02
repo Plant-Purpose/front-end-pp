@@ -2,9 +2,8 @@ import React, {useState, useEffect} from 'react';
 import authAxios from "../../util/authAxios";
 
 const MyTasks = () => {
-    const [tasks, setTasks] = useState({
-        
-    })
+    const [tasks, setTasks] = useState();
+    
     useEffect(() => {
        authAxios()
        .get('api/users/:id/tasks')
@@ -15,10 +14,10 @@ const MyTasks = () => {
             console.log(error)
         })
         }, [tasks])
-        console.log(tasks);
+        
     return(
         <div>
-            {/* {tasks && tasks.length !== 0 ? tasks.map(task => {
+            {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
                 <div>
                     <h3>{task.title}</h3>
@@ -26,10 +25,11 @@ const MyTasks = () => {
                     <p>{task.deadline}</p>
                 </div>
             )}):
-            <div> */}
+            <div>
                 <h2>My Tasks</h2>
                 <p>You have no tasks at this time.</p>
-            {/* </div> } */}
+            </div> 
+            }
         </div>
 
     )

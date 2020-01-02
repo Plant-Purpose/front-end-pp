@@ -4,10 +4,14 @@
   .landingBody {
     display:flex;
     width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 38rem;
     div {
       width: 50%;
       margin: auto;
       text-align: center;
+      justify-content: center;
       h1 {
         /* Headline 1/Regular */
         font-family: Poppins;
@@ -22,8 +26,8 @@
 
         /* Text1 */
         color: #212429;
-
         text-align: center;
+        justify-content: center;
       }
       h1.greenheader {
         /* Headline 1/Regular */
@@ -43,10 +47,22 @@
         text-align: center;
       }
       h3 {
+        /* Headline 3/Regular */
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: right;
+        letter-spacing: 0.08em;
+        padding: 5rem;
 
+        /* Text2 */
+        color: #495057;
+        text-align: center;
       }
     }
-    .signin {
+    button.signin {
       /* Button Text */
       font-family: Poppins;
       font-style: normal;
@@ -64,9 +80,68 @@
       /* Primary Color */
       background: #397D54;
       border-radius: 4px;
+
+      margin: auto;
     }
     img {
       width: 50%;
+    }
+  }
+  .landingFeatures {
+    display: flex;
+    background: #F8F6F5;
+    height: 38rem;
+    div {
+      margin: auto;
+      h6 {
+        /* Headline 3/Bold */
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+        text-transform: capitalize;
+
+        color: #000000;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      p {
+        /* Headline 4/Regular */
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+        text-transform: capitalize;
+
+        color: #000000;
+        justify-content: center;
+      }
+    }
+  }
+  .landingContact {
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    .socialApps {
+      width: 100%;
+      margin-right: 2rem;
+    }
+    .terms {
+      width: 100%;
     }
   }
 }

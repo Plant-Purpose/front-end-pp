@@ -14,23 +14,24 @@ const Register = props => {
     validateUser,
     submit
 )
+console.log(user)
   
   function submit(e) {
     e.preventDefault();
     axiosAuth()
-    .post('/api/register', user)
+    .post('https://plant-purpose.herokuapp.com/api/register', user)
     .then(res => {
       localStorage.setItem('token', res.data.token)
       props.history.push('/dashboard')
     })
     .catch(err => {
-      console.log(err)
+      console.dir(err)
     })
   }
 
   return (
     <>
-    <form  onSubmit={handleSubmit}>
+    <form  onSubmit={submit}>
       <h1> Register </h1>
       <label htmlFor="email">E: </label>
       <input
