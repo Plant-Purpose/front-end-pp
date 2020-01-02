@@ -21,6 +21,7 @@ const Register = props => {
 
   return (
     <>
+    <form  onSubmit={onSubmit}>
       <h1> Register </h1>
       <input
         type='email' 
@@ -37,6 +38,7 @@ const Register = props => {
         onChange={onChange}
       />
       <button type='submit'> Register </button>
+      </form>
     </>
   )
 }

@@ -26,7 +26,7 @@ const MyPlants = () => {
         .catch(error => {
             console.log(error);
         })      
-    }, [])
+    }, [plantid.id])
 
     return(
         <div>
