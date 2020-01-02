@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-import MyPlants from "./MyPlants";
+
+import MyPlants from "./MyPlants.js"
 import MyTasks from "./MyTasks";
 import Menu from "./Menu";
 import Notification from "./Notification";
