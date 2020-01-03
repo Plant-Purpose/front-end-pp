@@ -1,58 +1,65 @@
-.login-register {
-	font-family: 'Poppins';
-	background-color: rgb(241, 241, 241);
-	width: 30vw;
-	margin: 0 auto;
-	padding-bottom: 1rem;
+.form-contain {
+	background-image: url(/images/leaves.jpg);
+	background-size: cover;
+	min-height: 90vh;
+	padding-top: 5rem;
 
-	input {
-		border: 1px solid green;
-	}
-
-	.log-reg-head {
-		display: flex;
-		justify-content: space-around;
-		background-color: lightgray;
-		height: 3.4rem;
+	.login-register {
 		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 500;
-		font-size: 1.5rem;
-
-		h2 {
-			padding-top: 0.9rem;
-		}
-
-		.active-header {
-			border-bottom: 0.2rem solid green;
-		}
-	}
-
-	.log-reg-desc {
-		padding: 0 3rem;
-
-		h2 {
-			font-size: 1.5rem;
-			font-weight: bolder;
-			margin: 2rem 0;
-		}
-
-		p {
-			margin-bottom: 3rem;
-		}
-	}
-
-	@media @large {
-		width: 70vw;
+		background-color: rgb(241, 241, 241);
+		width: 30vw;
+		margin: 0 auto;
+		padding-bottom: 1rem;
 
 		input {
-			min-width: 50%;
+			border: 1px solid green;
 		}
-	}
 
-	@media @small {
-		width: 70vw;
-		padding-bottom: 1rem;
-		margin-bottom: 2rem;
+		.log-reg-head {
+			display: flex;
+			justify-content: space-around;
+			background-color: lightgray;
+			height: 3.4rem;
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.5rem;
+
+			h2 {
+				padding-top: 0.9rem;
+			}
+
+			.active-header {
+				border-bottom: 0.2rem solid green;
+			}
+		}
+
+		.log-reg-desc {
+			padding: 0 3rem;
+
+			h2 {
+				font-size: 1.5rem;
+				font-weight: bolder;
+				margin: 2rem 0;
+			}
+
+			p {
+				margin-bottom: 3rem;
+			}
+		}
+
+		@media @large {
+			width: 70vw;
+
+			input {
+				min-width: 50%;
+			}
+		}
+
+		@media @small {
+			width: 70vw;
+			padding-bottom: 1rem;
+			margin-bottom: 2rem;
+		}
 	}
 }

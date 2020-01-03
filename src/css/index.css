@@ -146,26 +146,32 @@ table {
   align-items: center;
   text-align: center;
   /* Background color */
-  color: #F8F6F5;
+  color: #f8f6f5;
   /* Primary Color */
-  background: #397D54;
+  background: #397d54;
   border-radius: 4px;
   margin: auto;
 }
 input {
   border: 1px solid green;
 }
-.login-register {
+.form-contain {
+  background-image: url(/images/leaves.jpg);
+  background-size: cover;
+  min-height: 90vh;
+  padding-top: 5rem;
+}
+.form-contain .login-register {
   font-family: 'Poppins';
   background-color: #f1f1f1;
   width: 30vw;
   margin: 0 auto;
   padding-bottom: 1rem;
 }
-.login-register input {
+.form-contain .login-register input {
   border: 1px solid green;
 }
-.login-register .log-reg-head {
+.form-contain .login-register .log-reg-head {
   display: flex;
   justify-content: space-around;
   background-color: lightgray;
@@ -175,33 +181,33 @@ input {
   font-weight: 500;
   font-size: 1.5rem;
 }
-.login-register .log-reg-head h2 {
+.form-contain .login-register .log-reg-head h2 {
   padding-top: 0.9rem;
 }
-.login-register .log-reg-head .active-header {
+.form-contain .login-register .log-reg-head .active-header {
   border-bottom: 0.2rem solid green;
 }
-.login-register .log-reg-desc {
+.form-contain .login-register .log-reg-desc {
   padding: 0 3rem;
 }
-.login-register .log-reg-desc h2 {
+.form-contain .login-register .log-reg-desc h2 {
   font-size: 1.5rem;
   font-weight: bolder;
   margin: 2rem 0;
 }
-.login-register .log-reg-desc p {
+.form-contain .login-register .log-reg-desc p {
   margin-bottom: 3rem;
 }
 @media (max-width:1000px) {
-  .login-register {
+  .form-contain .login-register {
     width: 70vw;
   }
-  .login-register input {
+  .form-contain .login-register input {
     min-width: 50%;
   }
 }
 @media (max-width:500px) {
-  .login-register {
+  .form-contain .login-register {
     width: 70vw;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -209,11 +215,13 @@ input {
 }
 .nav {
   display: flex;
+  height: 4rem;
+  margin-bottom: 0 !important;
 }
 .nav .mainNav {
   width: 50%;
   display: flex;
-  margin-left: 2rem;
+  margin-left: 4rem;
   margin-top: 0.5rem;
 }
 .nav .mainNav img {
@@ -225,7 +233,7 @@ input {
   align-items: center;
   justify-content: center;
   justify-content: flex-end;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 .nav .nav-container .loggedInButts {
   display: flex;
