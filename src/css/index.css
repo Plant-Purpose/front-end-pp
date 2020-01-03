@@ -351,3 +351,133 @@ table {
 .landing .landingContact .terms p {
   margin-bottom: 1rem;
 }
+.dash {
+  display: flex;
+  justify-content: space-evenly;
+  background: #F8F9FA;
+  font-family: Poppins;
+}
+.dash .leftDash {
+  width: 256px;
+  height: 875px;
+  margin-top: 5%;
+}
+.dash .leftDash .menuUserBox {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 2px 2px 2px 2px #F8F9FA;
+  padding: 2%;
+  align-items: flex-start;
+  border-bottom: 2px solid #F8F6F5;
+  border: 1px solid #F8F6F5;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.dash .leftDash .menuUserBox img {
+  margin: 2% 10% 10%;
+}
+.dash .leftDash .menuUserBox p {
+  font-size: 18px;
+}
+.dash .leftDash .menu {
+  background: white;
+  padding: 5% 0;
+  border-bottom: 2px solid #F8F6F5;
+}
+.dash .leftDash .menu .dashboard,
+.dash .leftDash .menu .plants,
+.dash .leftDash .menu .tasks,
+.dash .leftDash .menu .notes {
+  display: flex;
+  padding: 8%;
+  font-family: Poppins;
+}
+.dash .leftDash .menu .dashboard img,
+.dash .leftDash .menu .plants img,
+.dash .leftDash .menu .tasks img,
+.dash .leftDash .menu .notes img {
+  margin-right: 10%;
+}
+.dash .leftDash .userpref {
+  background: white;
+  padding: 5% 0;
+}
+.dash .leftDash .userpref .settings,
+.dash .leftDash .userpref .notifications {
+  display: flex;
+  padding: 8%;
+  font-family: Poppins;
+}
+.dash .leftDash .userpref .settings img,
+.dash .leftDash .userpref .notifications img {
+  margin-right: 10%;
+}
+.dash .middleDash .notifBar {
+  display: flex;
+  margin-top: 10%;
+  width: 655px;
+}
+.dash .middleDash .notifBar .plants,
+.dash .middleDash .notifBar .plantsNo,
+.dash .middleDash .notifBar .tasks,
+.dash .middleDash .notifBar .tasksNo,
+.dash .middleDash .notifBar .notifications,
+.dash .middleDash .notifBar .notificationsNo,
+.dash .middleDash .notifBar .notes,
+.dash .middleDash .notifBar .notesNo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 4px;
+  width: 156px;
+  height: 140px;
+  margin: 1%;
+}
+.dash .middleDash .notifBar .plants p,
+.dash .middleDash .notifBar .plantsNo p,
+.dash .middleDash .notifBar .tasks p,
+.dash .middleDash .notifBar .tasksNo p,
+.dash .middleDash .notifBar .notifications p,
+.dash .middleDash .notifBar .notificationsNo p,
+.dash .middleDash .notifBar .notes p,
+.dash .middleDash .notifBar .notesNo p {
+  margin: 5%;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.dash .middleDash .myPlants {
+  background: #FFFFFF;
+  border: 1px solid #F8F6F5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 655px;
+  height: 406px;
+  font-family: Poppins;
+  line-height: 2.7rem;
+}
+.dash .middleDash .myPlants h1 {
+  text-align: left;
+  margin: 3% 5%;
+}
+.dash .middleDash .myTasks {
+  background: #FFFFFF;
+  border: 1px solid #F8F6F5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 655px;
+  height: 406px;
+  font-family: Poppins;
+  line-height: 2.7rem;
+}
+.dash .middleDash .myTasks h2 {
+  text-align: left;
+  margin: 3% 5%;
+}
+.dash .rightDash {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  width: 655px;
+}

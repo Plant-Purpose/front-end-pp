@@ -14,25 +14,31 @@ const Dashboard = () => {
 			...date,
 			[e.target.name]: e.target.value
 		});
-	};
+    };
+    
     return(
         <div className='dash'>
             <div className='leftDash'>
                 <Menu/>
             </div>
+
             <div className='middleDash'>
                 <Notification/>
                 <MyPlants/>
                 <MyTasks/>
             </div>
+
             <div className='rightDash'>
+
             <input
             type='date'
             name='date'
             value={date.date}
             onChange={handleChange}
             />
+
             <AddPlant/>
+
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import {Route, Redirect} from "react-router-dom";
 
 
 function ProtectedRoute(props){
-    const{
+    const {
         component: Component,
         ...rest
     } = props

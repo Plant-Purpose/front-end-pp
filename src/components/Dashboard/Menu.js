@@ -10,17 +10,17 @@ const Menu = () => {
         <p> user modal drop down here </p>
       </div>
 
-      <div>
-        <div> <img src='images/Menu/dashboard.svg'/> Dashboard </div>
-        <div> <img src='images/Menu/myplants.svg'/> My Plants </div>
-        <div> <img src='images/Menu/tasks.svg'/> Tasks </div>
-        <div> <img src='images/Menu/notes.svg'/> Notes </div>
+      <div className="menu">
+        <div className="dashboard"> <img src='images/Menu/dashboard.svg' alt='dashboard'/> Dashboard </div>
+        <div className="plants"> <img src='images/Menu/myplants.svg'alt='leaf'/> My Plants </div>
+        <div className="tasks"> <img src='images/Menu/tasks.svg' alt='task'/> Tasks </div>
+        <div className="notes"> <img src='images/Menu/notes.svg' alt='notes'/> Notes </div>
         
       </div>
 
-      <div>
-        <div> Settings </div>
-        <div> Notifications </div>
+      <div className="userpref">
+        <div className='settings'> <img src='images/Menu/setting.svg' alt='settings'/>Settings</div>
+        <div className="notifications"> <img src='images/Notifications/notification_black.svg' alt='bell'/>Notifications </div>
       </div>
     </>
   )

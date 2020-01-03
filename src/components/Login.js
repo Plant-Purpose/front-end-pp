@@ -30,6 +30,7 @@ const Login = (props) => {
         return (
             <div>
                 <form onSubmit={handleSubmit}>
+
                     <label htmlFor="email">E: </label>
                     <input 
                         type="text" 
@@ -53,6 +54,7 @@ const Login = (props) => {
                     <p id='error-text'>{errors.password}</p>
 
                     <button type='submit'>Login</button>
+                    
                 </form>
             </div>
         )

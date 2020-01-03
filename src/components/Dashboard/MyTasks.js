@@ -17,11 +17,11 @@ const MyTasks = () => {
         console.log(tasks)
 
     return(
-        <div>
+        <div className="myTasks">
             {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
                 <div>
-                    <h3>{task.title}</h3>
+                    <h2>{task.title}</h2>
                     <p>{task.task}</p>
                     <p>{task.deadline}</p>
                 </div>

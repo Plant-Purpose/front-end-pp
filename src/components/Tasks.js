@@ -14,8 +14,27 @@ const Tasks = () => {
 
     return(
         <div>
-            <h1>Tasks</h1>
-            <p>{date}</p>
+
+            <div>
+                <h1>Tasks</h1>
+                <h4>{date}</h4>
+            </div>
+            
+            {task && task.length !==0 ? task.map(task => {
+                return(
+                <div>
+                    <img src='' alt='plant'/>
+                    <div>
+                        <p>{task.title}</p>
+                        <p>{task.task}</p>
+                        <p>{task.deadline}</p>
+                    </div>
+                </div>
+            )}):
+            <div>
+
+            </div>
+            }
         </div>
     )
     

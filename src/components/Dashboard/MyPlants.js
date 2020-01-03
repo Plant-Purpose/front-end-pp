@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import authAxios from "../../util/authAxios";
 import plantAPI from "../../../src/util/plantapi.js";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 const MyPlants = () => {
@@ -30,17 +31,24 @@ const MyPlants = () => {
     }, [plantid.id])
 
     return(
-        <div>
+        <div className="myPlants">
+
             {plants && plants.length !==0 ? plants.map(plant => {
                 return(
-                    <div>
-                        <h1>My Plants</h1>
+                    <div className="plantCard" >
+                        <h2>My Plants</h2>
                         <img src="" alt=''/>
-                        <p>{plant}</p>
+                        <p>{plant}</p>                        
                     </div>
 
                 )
-            }): null}
+            }): 
+            <div >
+                <h2>My Plants</h2>
+                <Link to='/add-plant'>Add Plant</Link>
+                
+            </div>            
+    }
             
         </div>
     )

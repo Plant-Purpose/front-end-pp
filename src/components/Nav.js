@@ -12,6 +12,7 @@ const Nav = (props) => {
             </div>
 
             <div className="button">
+
                 {signedIn && signedIn.length ? 
                 <div className="loggedInButts">
                     <button className='signup'> Logout </button>
@@ -22,6 +23,7 @@ const Nav = (props) => {
                     <button className='signup' onClick={() => props.history.push('/register')}> Sign Up </button>
                 </div>
                 }     
+                
             </div>
 
         </div>

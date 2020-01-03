@@ -37,13 +37,13 @@ const AddPlant = (props) => {
     const handleSearch = e => {
         e.preventDefault();
         axios
-        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`)
-        .then(response => {
-            console.log(response);
+        .get('')
+        .then(function(response) {
+            console.log('Rsponse',response);
             // setPlant(response.data)
         })
         .catch(error => {
-            console.dir(error)
+            console.dir('error', error)
         })
     }
 
