@@ -59,9 +59,9 @@ const MyPlants = () => {
                 
                 return(
                     <div className="plantCard" >
-                        <h3>{plant.common_name}</h3>                        
-                        <img src={plant.images.length ? plant.images[0].url : ""} alt={plant.common_name}/>
-                        <p>{plant.plant_id}</p>                        
+                        <h3>{plant.data.common_name}</h3>                        
+                        <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
+                        <p>{plant.data.plant_id}</p>                        
                     </div>
 
                 )

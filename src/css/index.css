@@ -679,6 +679,7 @@ input {
   }
 }
 .dash .middleDash .myPlants {
+  display: flex;
   font-family: Poppins;
   line-height: 2.7rem;
   background: #FFFFFF;
@@ -688,6 +689,13 @@ input {
   height: 350px;
   width: 100%;
   margin: 1%;
+}
+.dash .middleDash .myPlants .plantCard {
+  display: flex;
+}
+.dash .middleDash .myPlants .plantCard img {
+  width: 150px;
+  height: 150px;
 }
 .dash .middleDash .myPlants h2 {
   text-align: left;
@@ -716,13 +724,13 @@ input {
 .dash .middleDash .myTasks .taskCard {
   border: 1px solid #F8F6F5;
 }
-.dash .middleDash .myTasks h2 {
+.dash .middleDash .myTasks .taskCard h2 {
   text-align: left;
   margin: 3% 5%;
   font-weight: bold;
 }
 @media (max-width:800px) {
-  .dash .middleDash .myTasks {
+  .dash .middleDash .myTasks .taskCard {
     height: fit-content;
   }
 }

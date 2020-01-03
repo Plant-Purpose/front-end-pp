@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import TaskCard from './TaskCard';
 import authAxios from "../../util/authAxios";
 
 const MyTasks = () => {
@@ -24,11 +25,7 @@ const MyTasks = () => {
             <div className="taskContainer">
             {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
-                <div className="taskCard">
-                    <h2>{task.title}</h2>
-                    <p>{task.task}</p>
-                    <p>Due By: {task.deadline}</p>
-                </div>
+                    <TaskCard task={task} />
             )}):
             <div>                
                 <p>You have no tasks at this time.</p>
