@@ -36,20 +36,17 @@ const Menu = () => {
 
 			<div className='menu'>
 				<div className='dashboard'>
-					{' '}
-					<img
-						src='images/Menu/dashboard.svg'
-						alt='dashboard'
-					/> Dashboard{' '}
+					<img src='images/Menu/dashboard.svg' alt='dashboard' /> Dashboard
 				</div>
+
 				<div
 					className='plants'
 					style={{ position: 'relative', cursor: 'pointer' }}
 					onClick={e => togglePlantPanel(e)}
 				>
-					{' '}
-					<img src='images/Menu/myplants.svg' alt='leaf' /> My Plants{' '}
+					<img src='images/Menu/myplants.svg' alt='leaf' /> My Plants
 				</div>
+				<ListMyPlantPanel />
 
 				<div
 					className='tasks'
@@ -65,15 +62,13 @@ const Menu = () => {
 					style={{ position: 'relative', cursor: 'pointer' }}
 					onClick={toggleNotesPanel}
 				>
-					{' '}
-					<img src='images/Menu/notes.svg' alt='notes' /> Notes{' '}
+					<img src='images/Menu/notes.svg' alt='notes' /> Notes
 				</div>
 				{/* <AddNotesPanel /> */}
 			</div>
 
 			<div className='userpref'>
 				<div className='settings'>
-					{' '}
 					<img src='images/Menu/setting.svg' alt='settings' />
 					Settings
 				</div>
