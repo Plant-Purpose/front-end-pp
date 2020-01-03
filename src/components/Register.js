@@ -1,14 +1,14 @@
 import React from 'react';
+import axios from "axios";
 import { validateRegistration } from '../util/formValidation/validateRegistration'
 import { useForm } from '../util/useForm';
-import axios from "axios";
 
 const initialState = {
   full_name: '',
   email: '',
   password: '',
-  phone: '',
-  location: ''
+  phone: null,
+  location: null
 }
 
 const Register = props => {

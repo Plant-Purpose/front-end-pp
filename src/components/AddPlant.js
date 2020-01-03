@@ -33,7 +33,8 @@ const AddPlant = (props) => {
     const handleSearch = e => {
         e.preventDefault();
         plantAPI()
-        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`)
+        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`, {
+        headers: {"Access-Control-Allow-Origin":  "https://front-end-pp.now.sh"}} )
         .then(response => {
             console.log(response)
             setPlant(response.data)
