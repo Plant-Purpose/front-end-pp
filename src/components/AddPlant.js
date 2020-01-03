@@ -25,7 +25,9 @@ const AddPlant = (props) => {
         e.preventDefault();
         authAxios()
         .post('api/users/:id/plants', plant)
-        .then(props.history.push('/dashboard'))
+        .then(
+            console.log(response)
+            // props.history.push('/dashboard'))
         .catch(error => {
             console.log(error)
         })
