@@ -20,21 +20,21 @@ const QueryUserPlants = () => {
 	}, [userId]);
 
 	return (
-		<h1>Please Work</h1>
-		// <div className='plant-panel'>
-		// 	<h2>My Plants</h2>
-		// 	<div className='ListContainer'>
-		// 		{listPlants && listPlants.plants.length !== 0 ? (
-		// 			listPlants.plants.map(plant => {
-		// 				return plant;
-		// 			})
-		// 		) : (
-		// 			<div>
-		// 				<p>You have no Plants at this time.</p>
-		// 			</div>
-		// 		)}
-		// 	</div>
-		// </div>
+		<div className='plant-panel'>
+			{/* <h1>Please Work</h1> */}
+			{/* <h2>My Plants</h2>
+		<div className='ListContainer'>
+				{listPlants && listPlants.plants.length !== 0 ? ( 
+					listPlants.plants.map(plant => {
+						return plant;
+					})
+				) : (
+					<div>
+						<p>You have no Plants at this time.</p>
+					</div>
+				)}
+			</div>  */}
+		</div>
 	);
 };
 export default QueryUserPlants;
