@@ -25,9 +25,10 @@ const AddPlant = (props) => {
         e.preventDefault();
         authAxios()
         .post('api/users/:id/plants', plant)
-        .then(
+        .then(response => {
             console.log(response)
-            // props.history.push('/dashboard'))
+            // props.history.push('/dashboard')
+        })
         .catch(error => {
             console.log(error)
         })
@@ -36,10 +37,14 @@ const AddPlant = (props) => {
     const handleSearch = e => {
         e.preventDefault();
         axios
-        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`)
+        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`. {
+            headers: {
+                "Access-Control-Max-Age": 86400
+            }
+        })
         .then(response => {
             console.log(response)
-            setPlant(response.data)
+            // setPlant(response.data)
         })
         .catch(error => {
             console.dir(error)
