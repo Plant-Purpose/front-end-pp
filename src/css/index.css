@@ -474,7 +474,7 @@ html {
 .dash {
   display: flex;
   justify-content: space-between;
-  background: #F8F9FA;
+  background: #f8f9fa;
   font-family: Poppins;
   height: 100%;
   margin: 0 auto;
@@ -486,7 +486,7 @@ html {
 }
 @media (max-width:500px) {
   .dash {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .dash .leftDash {
@@ -517,11 +517,11 @@ html {
 .dash .leftDash .menuUserBox {
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 2px 2px #F8F9FA;
+  box-shadow: 2px 2px 2px 2px #f8f9fa;
   padding: 2%;
   align-items: flex-start;
-  border-bottom: 2px solid #F8F6F5;
-  border: 1px solid #F8F6F5;
+  border-bottom: 2px solid #f8f6f5;
+  border: 1px solid #f8f6f5;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -546,7 +546,7 @@ html {
 }
 .dash .leftDash .menu {
   padding: 5% 0;
-  border-bottom: 2px solid #F8F6F5;
+  border-bottom: 2px solid #f8f6f5;
 }
 @media (max-width:500px) {
   .dash .leftDash .menu {
@@ -677,7 +677,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 4px;
   width: 156px;
   height: 140px;
@@ -711,8 +711,8 @@ html {
   text-align: left;
   font-family: Poppins;
   line-height: 2.7rem;
-  background: #FFFFFF;
-  border: 1px solid #F8F6F5;
+  background: #ffffff;
+  border: 1px solid #f8f6f5;
   box-sizing: border-box;
   border-radius: 4px;
   height: 350px;
@@ -755,8 +755,8 @@ html {
   flex-direction: column;
   font-family: Poppins;
   line-height: 2.7rem;
-  background: #FFFFFF;
-  border: 1px solid #F8F6F5;
+  background: #ffffff;
+  border: 1px solid #f8f6f5;
   box-sizing: border-box;
   border-radius: 4px;
   height: 350px;
@@ -776,8 +776,8 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #F8F6F5;
-  background: #F8F9FA;
+  border: 1px solid #f8f6f5;
+  background: #f8f9fa;
   border-radius: 4px;
   height: 100px;
   margin: 1%;
@@ -811,6 +811,7 @@ html {
 @media (max-width:500px) {
   .dash .rightDash {
     width: 100%;
+    flex-direction: column-reverse;
   }
 }
 .dash .rightDash .calendar {
@@ -826,8 +827,8 @@ html {
   flex-direction: column;
   width: 70%;
   padding: 5% 0;
-  background: #FFFFFF;
-  border: 1px solid #F8F6F5;
+  background: #ffffff;
+  border: 1px solid #f8f6f5;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -839,6 +840,11 @@ html {
     width: 100%;
   }
 }
+@media (max-width:500px) {
+  .dash .rightDash .addPlant .pot {
+    display: none;
+  }
+}
 .add-modal {
   position: absolute;
   bottom: 0;
@@ -846,7 +852,7 @@ html {
   height: 0.01%;
   width: 100%;
   max-width: 50vw;
-  background-color: #F8F6F5;
+  background-color: #f8f6f5;
   transition: height 750ms ease;
 }
 .add-modal .close {
@@ -862,8 +868,19 @@ html {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 92%;
   transition: opacity 700ms ease;
+}
+@media (max-width:500px) {
+  .add-modal .modal-content {
+    max-height: 71vh;
+    flex-direction: column;
+    position: fixed;
+    top: 24vh;
+    left: 0.25rem;
+    padding: 0 1rem;
+    background-image: linear-gradient(to top right, #d8d8d8, #777676);
+  }
 }
 .add-modal .modal-content .left-col {
   height: 100%;
@@ -895,6 +912,21 @@ html {
   width: 100%;
   max-width: 300px;
   margin: 0;
+}
+@media (max-width:500px) {
+  .add-modal {
+    background: none;
+    min-width: 99vw;
+    max-height: 71vh;
+    position: fixed;
+    top: 16rem;
+    left: 0;
+  }
+}
+@media (max-width:500px) {
+  .add-modal .modal-content .right-col .img-uploader {
+    display: none;
+  }
 }
 .add-form {
   display: flex;
@@ -947,6 +979,12 @@ html {
 }
 .task-box .inner-task-box textarea {
   max-width: 200px;
+}
+#zindex-one {
+  z-index: 1;
+}
+#zindex-minus-one {
+  z-index: -1;
 }
 .task-panel {
   position: absolute;
