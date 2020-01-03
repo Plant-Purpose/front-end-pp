@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import authAxios from "../util/authAxios";
 import plantAPI from "../util/plantapi.js"
+import axios from "axios";
 
 import AddTask from "./AddTask"
 
@@ -32,9 +33,8 @@ const AddPlant = (props) => {
 
     const handleSearch = e => {
         e.preventDefault();
-        plantAPI()
-        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`, {
-        headers: {"Access-Control-Allow-Origin":  "https://front-end-pp.now.sh"}} )
+        axios
+        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`)
         .then(response => {
             console.log(response)
             setPlant(response.data)

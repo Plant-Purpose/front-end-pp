@@ -19,7 +19,6 @@ const Login = (props) => {
         axios
         .post('https://plant-purpose.herokuapp.com/api/auth/login', user)
         .then(response => {
-            console.log(response)
             localStorage.setItem('token', response.data.token);
             props.history.push('/dashboard');
         })

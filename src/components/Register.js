@@ -7,8 +7,8 @@ const initialState = {
   full_name: '',
   email: '',
   password: '',
-  phone: null,
-  location: null
+  phone: '',
+  location: ''
 }
 
 const Register = props => {
@@ -25,7 +25,7 @@ const Register = props => {
     .then(res => {
       console.log(res)
       localStorage.setItem('token', res.data.token)
-      // props.history.push('/dashboard')
+      props.history.push('/dashboard')
     })
     .catch(err => {
       console.dir(err)
