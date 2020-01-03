@@ -10,9 +10,7 @@ const AddPlant = (props) => {
         plant_id: '',
         created_at: Date.now(),
         common_name: ''
-    })
-
-    
+    })    
 
     const handleInput = e => {
         setPlant({
@@ -56,7 +54,7 @@ const AddPlant = (props) => {
             </form>
             <div>
                 <AddTask/>
-            </div>
+            </div>  
         </div>
     )
 } 

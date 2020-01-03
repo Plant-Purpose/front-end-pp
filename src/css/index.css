@@ -353,19 +353,24 @@ table {
 }
 .dash {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background: #F8F9FA;
   font-family: Poppins;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 }
 .dash .leftDash {
-  width: 256px;
-  height: 875px;
-  margin-top: 5%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  height: 1000px;
+  width: 40%;
 }
 .dash .leftDash .menuUserBox {
   display: flex;
   flex-direction: column;
-  background: white;
   box-shadow: 2px 2px 2px 2px #F8F9FA;
   padding: 2%;
   align-items: flex-start;
@@ -379,9 +384,9 @@ table {
 }
 .dash .leftDash .menuUserBox p {
   font-size: 18px;
+  padding: 4%;
 }
 .dash .leftDash .menu {
-  background: white;
   padding: 5% 0;
   border-bottom: 2px solid #F8F6F5;
 }
@@ -413,10 +418,15 @@ table {
 .dash .leftDash .userpref .notifications img {
   margin-right: 10%;
 }
+.dash .middleDash {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 2%;
+}
 .dash .middleDash .notifBar {
   display: flex;
-  margin-top: 10%;
-  width: 655px;
 }
 .dash .middleDash .notifBar .plants,
 .dash .middleDash .notifBar .plantsNo,
@@ -448,28 +458,30 @@ table {
   font-size: 1.2rem;
 }
 .dash .middleDash .myPlants {
+  font-family: Poppins;
+  line-height: 2.7rem;
   background: #FFFFFF;
   border: 1px solid #F8F6F5;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 655px;
-  height: 406px;
-  font-family: Poppins;
-  line-height: 2.7rem;
+  height: 350px;
+  width: 81%;
+  margin: 1%;
 }
-.dash .middleDash .myPlants h1 {
+.dash .middleDash .myPlants h2 {
   text-align: left;
   margin: 3% 5%;
 }
 .dash .middleDash .myTasks {
+  font-family: Poppins;
+  line-height: 2.7rem;
   background: #FFFFFF;
   border: 1px solid #F8F6F5;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 655px;
-  height: 406px;
-  font-family: Poppins;
-  line-height: 2.7rem;
+  height: 350px;
+  width: 81%;
+  margin: 1%;
 }
 .dash .middleDash .myTasks h2 {
   text-align: left;
@@ -478,6 +490,47 @@ table {
 .dash .rightDash {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-top: 10%;
-  width: 655px;
+  width: 40%;
+  height: 467px;
+}
+.dash .rightDash .addPlant {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #F8F6F5;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.dash .rightDash .addPlant .plusSign {
+  margin: 2%;
+}
+.add-plant .add-modal {
+  position: absolute;
+  bottom: -14%;
+  right: 0;
+  display: none;
+  height: 500px;
+  width: 650px;
+  background-color: #F8F6F5;
+}
+.add-plant .add-modal .close {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 24px;
+}
+.add-plant .add-modal .modal-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.add-plant .add-modal .modal-content .left-col {
+  border: 1px solid red;
+  height: 400px;
+}
+.add-plant .add-modal .modal-content .right-col {
+  border: 1px solid red;
+  height: 400px;
 }

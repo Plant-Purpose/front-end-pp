@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Calendar from "react-calendar";
 
 import MyPlants from "./MyPlants";
 import MyTasks from "./MyTasks";
@@ -30,11 +31,12 @@ const Dashboard = () => {
 
             <div className='rightDash'>
 
-            <input
+            <Calendar
             type='date'
             name='date'
             value={date.date}
             onChange={handleChange}
+            className="calendar"
             />
 
             <AddPlant/>
