@@ -1,5 +1,5 @@
 import React from 'react';
-import axiosAuth from "../util/authAxios";
+import axios from 'axios'
 import { validateUser } from '../util/formValidation/validateUser'
 import { useForm } from '../util/useForm'
 
@@ -16,8 +16,8 @@ const Login = (props) => {
     )
 
     function submit() {
-        axiosAuth()
-        .post('/api/login', user)
+        axios
+        .post('https://plant-purpose.herokuapp.com/api/login', user)
         .then(response => {
             console.log(response)
             localStorage.setItem('token', response.data.token);
