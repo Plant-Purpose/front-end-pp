@@ -7,31 +7,34 @@ const MyTasks = () => {
     
     useEffect(() => {
        authAxios()
-       .get(`api/users/${userId}/tasks`)
+       .get(`https://plant-purpose.herokuapp.com/api/users/${userId}/tasks`)
        .then(response => {
-        setTasks(response.data)
+            console.log('TASK -->', response)
+            setTasks([ ...response.data ])
         })
         .catch(error => {
             console.log(error)
         })
-        }, [tasks])
-        console.log(tasks)
+        }, [userId])
+        // console.log(tasks)
 
     return(
         <div className="myTasks">
+            <h2>My Tasks</h2>
+            <div className="taskContainer">
             {tasks && tasks.length !== 0 ? tasks.map(task => {
                 return(
-                <div>
+                <div className="taskCard">
                     <h2>{task.title}</h2>
                     <p>{task.task}</p>
-                    <p>{task.deadline}</p>
+                    <p>Due By: {task.deadline}</p>
                 </div>
             )}):
-            <div>
-                <h2>My Tasks</h2>
+            <div>                
                 <p>You have no tasks at this time.</p>
-            </div> 
+            </div>             
             }
+            </div>
         </div>
     )
 }

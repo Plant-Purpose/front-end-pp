@@ -33,17 +33,19 @@ const Register = props => {
 
   return (
     <div className='login-register'>  
-    <div className='log-reg-head'>
-      <h2 
-        onClick={() => props.history.push('/login')}
-        style={{ cursor: 'pointer' }}
-      >
-        Sign In
-      </h2>  
-      <h2 className='active-header'>Sign Up</h2>
-    </div>
-                <h2>Welcome Back!</h2>
-                <p>Your plants missed you.  Keep track of them by turning notifications on.</p>
+      <div className='log-reg-head'>
+        <h2 
+          onClick={() => props.history.push('/login')}
+          style={{ cursor: 'pointer' }}
+        >
+          Sign In
+        </h2> 
+        <h2 className='active-header'>Sign Up</h2>
+      </div>
+      <div className='log-reg-desc'> 
+        <h2>Create an Account!</h2>
+        <p>Keep forgetting to water your plants?  No problem, we have the solution.  Sign up today.</p>
+      </div>
       <form  onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
       <input

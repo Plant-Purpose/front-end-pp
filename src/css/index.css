@@ -152,10 +152,15 @@ table {
   border-radius: 4px;
   margin: auto;
 }
+input {
+  border: 1px solid green;
+}
 .login-register {
-  border: 1px solid black;
+  font-family: 'Poppins';
+  background-color: #f1f1f1;
   width: 30vw;
   margin: 0 auto;
+  padding-bottom: 1rem;
 }
 .login-register .log-reg-head {
   display: flex;
@@ -165,13 +170,24 @@ table {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+}
+.login-register .log-reg-head h2 {
+  padding-top: 0.9rem;
 }
 .login-register .log-reg-head .active-header {
   border-bottom: 0.2rem solid green;
 }
-.login-register button {
-  margin-bottom: 1rem;
+.login-register .log-reg-desc {
+  padding: 0 3rem;
+}
+.login-register .log-reg-desc h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 2rem 0;
+}
+.login-register .log-reg-desc p {
+  margin-bottom: 3rem;
 }
 .nav {
   display: flex;
@@ -683,6 +699,7 @@ table {
   }
 }
 .dash .middleDash .myTasks {
+  display: flex;
   font-family: Poppins;
   line-height: 2.7rem;
   background: #FFFFFF;
@@ -694,8 +711,15 @@ table {
   margin: 1%;
 }
 .dash .middleDash .myTasks h2 {
+  font-weight: bold;
+}
+.dash .middleDash .myTasks .taskCard {
+  border: 1px solid #F8F6F5;
+}
+.dash .middleDash .myTasks h2 {
   text-align: left;
   margin: 3% 5%;
+  font-weight: bold;
 }
 @media (max-width:800px) {
   .dash .middleDash .myTasks {

@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 
 const MyPlants = () => {
     const [plants, setPlants] = useState();
+    const [plantIDs, setPlantIDs] = useState([]);
     // const plantId = plants.plant_id;
     const userId = localStorage.getItem('uid');
 
@@ -15,28 +16,23 @@ const MyPlants = () => {
     
 
     useEffect(() => {
-        
         authAxios()
         .get(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants`)
-        .then(response => {
-            console.log(response.data)
-            setPlants(response.data);
-            // console.log(plantid.plant_id)
-           
-            // axios
-            // .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
-            // .then(response => {
-            //     setPlants(response.data)
-            // })
-            // .catch(error => {
-            //     console.dir(error);
-            // })
+        .then(async response => {
+
+            const IDS = response.data.map(plant => {
+                return axios.get(`https://plant-purpose.herokuapp.com/api/plants/browse/${plant.plant_id}`)
+            });
+            console.log('ids', IDS)
+            const allPlants = await Promise.all(IDS);
+            console.log(allPlants)
+            setPlants(allPlants)
         })
         .catch(error => {
             console.log(error);
         })      
     }, [userId])
-    console.log(plants)
+    // console.log(plants, plantIDs)
 
     const displayModal = (e) => {
         e.preventDefault();
@@ -62,8 +58,9 @@ const MyPlants = () => {
             {plants && plants.length !==0 ? plants.map(plant => {
                 
                 return(
-                    <div className="plantCard" >                        
-                        <img src="" alt=''/>
+                    <div className="plantCard" >
+                        <h3>{plant.common_name}</h3>                        
+                        <img src={plant.images.length ? plant.images[0].url : ""} alt={plant.common_name}/>
                         <p>{plant.plant_id}</p>                        
                     </div>
 
