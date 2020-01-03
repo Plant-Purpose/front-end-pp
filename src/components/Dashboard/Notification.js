@@ -10,7 +10,18 @@ const Notification =() => {
         notes: []
     });
 
-    // useEffect(() => {
+    useEffect( () => {
+        const userID = localStorage.getItem('uid');
+        
+        const getData = async () => {
+            const result = await Promise.all([
+                authAxios().get(`https://plant-purpose.herokuapp.com/api/users/${userID}/plants`),
+                authAxios().get(`https://plant-purpose.herokuapp.com/api/users/${userID}/tasks`)
+            ]);
+
+            console.log('RESULT', result)
+        }
+   
     //     authAxios()
     //     .get('')
     //     .then(response => {
@@ -19,7 +30,7 @@ const Notification =() => {
     //     .catch(error => {
     //         console.log(error)
     //     })
-    // }, [notification])         
+    }, [notification])         
                 
                 
     return(

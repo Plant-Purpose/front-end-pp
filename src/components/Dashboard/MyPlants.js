@@ -32,7 +32,7 @@ const MyPlants = () => {
             console.log(error);
         })      
     }, [userId])
-    console.log(plants, plantIDs)
+    console.log("plants",plants)
 
     const displayModal = (e) => {
         e.preventDefault();
@@ -57,16 +57,15 @@ const MyPlants = () => {
             <h2>My Plants</h2>
             <div className='plantContainer'>
             {plants && plants.length !==0 ? plants.map(plant => {
-                
                 return(
+                plants.images && plants.images.length ?                 
                     <div className="plantCard" key={plant.data.id}>
                         <h3>{plant.data.name}</h3>                        
                         <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
                         <p>{plant.data.plant_id}</p>                        
-                    </div>
-
-                )
-            }): 
+                    </div>: null
+                )}): 
+                
             <div className="add-plant" >
                 
                 <button className='button' onClick={e => displayModal(e)}>Add Plant</button>

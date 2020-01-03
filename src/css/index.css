@@ -162,6 +162,9 @@ input {
   margin: 0 auto;
   padding-bottom: 1rem;
 }
+.login-register input {
+  border: 1px solid green;
+}
 .login-register .log-reg-head {
   display: flex;
   justify-content: space-around;
@@ -201,10 +204,6 @@ input {
   .login-register {
     width: 70vw;
   }
-}
-.login-register input {
-  width: 70%;
-  border: 1px solid black;
 }
 .nav {
   display: flex;
