@@ -41,8 +41,8 @@ const LandingPage = props => {
 						src='images/Landing/landingFeat1.svg'
 						alt='home page feature 1'
 					/>
-					<h6> Feature One Details </h6>
-					<p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
+					<h6> Watering </h6>
+					<p> Keeping track of when and which plants need water </p>
 				</div>
 
 				<div>
@@ -51,8 +51,8 @@ const LandingPage = props => {
 						src='images/Landing/landingFeat2.svg'
 						alt='home page feature 2'
 					/>
-					<h6> Feature Two Details </h6>
-					<p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
+					<h6> Growing </h6>
+					<p> Discovering your plants optimal growth period </p>
 				</div>
 
 				<div>
@@ -61,8 +61,8 @@ const LandingPage = props => {
 						src='images/Landing/landingFeat3.svg'
 						alt='home page feature 3'
 					/>
-					<h6> Feature Three Details </h6>
-					<p> Voluptate ullamco Voluptate ullamco Voluptate ullamco </p>
+					<h6> Getting the Details </h6>
+					<p> Plan tasks and take notes specific to each plant and get reminders </p>
 				</div>
 			</div>
 

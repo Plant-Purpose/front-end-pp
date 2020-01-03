@@ -160,7 +160,6 @@ table {
 }
 html::-webkit-scrollbar {
   width: 0.4rem;
-  height: 0.5rem;
   background-color: #1b3b28;
 }
 html::-webkit-scrollbar-thumb {
@@ -232,6 +231,12 @@ html {
   height: 4rem;
   margin-bottom: 0 !important;
 }
+@media (max-width:500px) {
+  .nav {
+    height: 5rem;
+    padding: 1rem 0;
+  }
+}
 .nav .mainNav {
   width: 50%;
   display: flex;
@@ -249,49 +254,23 @@ html {
   justify-content: flex-end;
   margin-right: 4rem;
 }
+.nav .nav-container button {
+  margin-right: 1rem;
+}
 .nav .nav-container .loggedInButts {
   display: flex;
 }
-.nav .nav-container .loggedInButts button {
-  justify-content: flex-end;
+@media (max-width:500px) {
+  .nav .nav-container .loggedInButts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .nav-container .loggedInButts button {
+    margin: 0.5rem 0.8rem 0;
+  }
 }
 .nav .nav-container .loggedOutButts {
   display: flex;
-}
-.nav .nav-container .loggedOutButts .signup {
-  /* Button Text */
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.08em;
-  /* Text2 */
-  color: #495057;
-  /* Secondary Color */
-  background: #e4d5c7;
-  border-radius: 4px;
-}
-.nav .nav-container .loggedOutButts .signin {
-  /* Button Text */
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.08em;
-  /* Background color */
-  color: #f8f6f5;
-  /* Primary Color */
-  background: #397d54;
-  border-radius: 4px;
-  margin-right: 1rem;
 }
 @media (max-width:500px) {
   .nav .nav-container .loggedOutButts {
@@ -999,4 +978,7 @@ html {
 }
 .inner-task-box textarea {
   max-width: 200px;
+}
+.notes {
+  transition: background-color 500ms ease;
 }

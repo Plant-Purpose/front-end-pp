@@ -3,6 +3,11 @@
 	height: 4rem;
 	margin-bottom: 0 !important;
 
+	@media @small {
+		height: 5rem;
+		padding: 1rem 0;
+	}
+
 	.mainNav {
 		width: 50%;
 		display: flex;
@@ -22,61 +27,31 @@
 		justify-content: flex-end;
 		margin-right: 4rem;
 
+		button {
+			margin-right: 1rem;
+		}
+
+		// @media @small {
+		// 	padding-top: 1rem;
+		// }
+
 		.loggedInButts {
 			display: flex;
 
-			button {
-				justify-content: flex-end;
+			@media @small {
+				flex-direction: column;
+				align-items: center;
+
+				button {
+					margin: 0.5rem 0.8rem 0;
+				}
 			}
 		}
 
 		.loggedOutButts {
 			display: flex;
 
-			.signup {
-				/* Button Text */
-				font-family: Poppins;
-				font-style: normal;
-				font-weight: bold;
-				font-size: 14px;
-				line-height: 21px;
-				display: flex;
-				align-items: center;
-				text-align: center;
-				letter-spacing: 0.08em;
-
-				/* Text2 */
-				color: #495057;
-
-				/* Secondary Color */
-				background: #e4d5c7;
-				border-radius: 4px;
-			}
-
-			.signin {
-				/* Button Text */
-				font-family: Poppins;
-				font-style: normal;
-				font-weight: bold;
-				font-size: 14px;
-				line-height: 21px;
-				display: flex;
-				align-items: center;
-				text-align: center;
-				letter-spacing: 0.08em;
-
-				/* Background color */
-				color: #f8f6f5;
-
-				/* Primary Color */
-				background: #397d54;
-				border-radius: 4px;
-
-				margin-right: 1rem;
-			}
-
 			@media @small {
-				// border: 3px solid red;
 				flex-direction: column;
 				align-items: center;
 

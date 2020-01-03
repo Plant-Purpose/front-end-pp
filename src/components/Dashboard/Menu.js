@@ -6,9 +6,15 @@ const Menu = () => {
   
     const panel = document.querySelector('.task-panel');
     const menu = document.querySelector('.tasks');
-    console.log(panel)
+  
     menu.classList.toggle('dark');
     panel.classList.toggle('show');
+  }
+
+  const toggleNotesPanel = () => {
+    const menu = document.querySelector('.notes')
+
+    menu.classList.toggle('dark');
   }
 
   return (
@@ -25,7 +31,7 @@ const Menu = () => {
         <div className="tasks" style={{ position: 'relative', cursor: 'pointer' }} onClick={e => toggleTaskPanel(e)}><img src='images/Menu/tasks.svg' alt='task'/> Tasks</div>
         <AddTaskPanel /> 
 
-        <div className="notes"> <img src='images/Menu/notes.svg' alt='notes'/> Notes </div>
+        <div className="notes" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleNotesPanel} > <img src='images/Menu/notes.svg' alt='notes'/> Notes </div>
         
       </div>
 

@@ -6,8 +6,8 @@ const MyPlantsCard = (props) =>{
    
     const userId = localStorage.getItem('uid')
     const deleteHandler = () => {
-        console.log("inside", props.plant.data.id)
-        axios.delete(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants/${props.plant.data.id}`)
+        console.log("inside", props.plantId)
+        axios.delete(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants/${props.plantId}`)
             .then(res => {
                 console.log(res)
             })
@@ -15,6 +15,8 @@ const MyPlantsCard = (props) =>{
                 console.log(err)
             });
     }
+console.log('poooops', props);    
+
     return(
                         
         <div className="plantCard" >

@@ -16,22 +16,27 @@ const MyPlants = () => {
     useEffect(() => {
         authAxios()
         .get(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants`)
-        .then(async response => {
-
+        .then(async response => {                
             const IDS = response.data.map(plant => {
                 return axios.get(`https://plant-purpose.herokuapp.com/api/plants/browse/${plant.plant_id}`)
             });
+
+            const deleteIds = response.data.map(plant => plant.id);
+
             // console.log('ids', IDS)
             const allPlants = await Promise.all(IDS);
             // console.log("allPlants",allPlants)
             setPlants(allPlants)
+
+            console.log('TESST', deleteIds)
+            setPlantIDs(deleteIds)
         })
         .catch(error => {
             console.log(error);
         })      
     }, [userId])
     
-
+    
     const displayModal = (e) => {
         e.preventDefault();
 
@@ -55,10 +60,10 @@ const MyPlants = () => {
         <div className="myPlants">
             <h2>My Plants</h2>
             <div className='plantContainer'>
-            {plants && plants.length !==0 ? plants.map(plant => {
+            {plants && plants.length !==0 ? plants.map((plant, index) => {
                 return(
                     plant.data.images && plant.data.images.length !==0 ?                
-                    <MyPlantsCard plant={plant} key={plant.data.id}/>: null
+                    <MyPlantsCard plant={plant} key={plant.data.id} plantId={plantIDs[index]}/>: null
             )}): <button className='button' onClick={e => displayModal(e)}>Add Plant</button>
            
             }    

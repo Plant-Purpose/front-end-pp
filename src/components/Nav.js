@@ -11,17 +11,6 @@ const Nav = props => {
     const signedIn = localStorage.getItem('token'); 
     
     const home = e => {
-        e.preventDefault();
-        props.history.push('/')
-    }
-
-    const signInForm = e => {
-        e.preventDefault()
-        props.history.push('/')
-    }
-
-    const signUpForm = e => {
-        e.preventDefault()
         props.history.push('/')
     }
     return(
@@ -46,6 +35,7 @@ const Nav = props => {
 
                 {signedIn && signedIn.length ? 
                 <div className="loggedInButts">
+                    <button className='button'>Dashboard</button>
                     <button className='signup button' onClick={logout}> Logout </button>
                 </div>
                 :
