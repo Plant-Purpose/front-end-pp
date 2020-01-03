@@ -20,20 +20,21 @@ const QueryUserPlants = () => {
 	}, [userId]);
 
 	return (
-		<div className='ListUserPlants'>
-			<h2>My Plants</h2>
-			<div className='ListContainer'>
-				{listPlants && listPlants.length !== 0 ? (
-					listPlants.map(plant => {
-						return QueryUserPlants.plants;
-					})
-				) : (
-					<div>
-						<p>You have no Plants at this time.</p>
-					</div>
-				)}
-			</div>
-		</div>
+		<h1>Please Work</h1>
+		// <div className='plant-panel'>
+		// 	<h2>My Plants</h2>
+		// 	<div className='ListContainer'>
+		// 		{listPlants && listPlants.plants.length !== 0 ? (
+		// 			listPlants.plants.map(plant => {
+		// 				return plant;
+		// 			})
+		// 		) : (
+		// 			<div>
+		// 				<p>You have no Plants at this time.</p>
+		// 			</div>
+		// 		)}
+		// 	</div>
+		// </div>
 	);
 };
 export default QueryUserPlants;
