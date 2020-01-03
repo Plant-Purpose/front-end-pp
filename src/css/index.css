@@ -203,6 +203,8 @@ input {
 @media (max-width:500px) {
   .login-register {
     width: 70vw;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .nav {
@@ -248,7 +250,7 @@ input {
   /* Text2 */
   color: #495057;
   /* Secondary Color */
-  background: #E4D5C7;
+  background: #e4d5c7;
   border-radius: 4px;
 }
 .nav .nav-container .loggedOutButts .signin {
@@ -263,11 +265,20 @@ input {
   text-align: center;
   letter-spacing: 0.08em;
   /* Background color */
-  color: #F8F6F5;
+  color: #f8f6f5;
   /* Primary Color */
-  background: #397D54;
+  background: #397d54;
   border-radius: 4px;
   margin-right: 1rem;
+}
+@media (max-width:500px) {
+  .nav .nav-container .loggedOutButts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .nav-container .loggedOutButts button {
+    margin: 0.5rem 0.8rem;
+  }
 }
 .landing {
   display: flex;
@@ -315,7 +326,7 @@ input {
   text-align: right;
   letter-spacing: 0.08em;
   /* Text1 */
-  color: #397D54;
+  color: #397d54;
   text-align: center;
 }
 .landing .landingBody div h3 {
@@ -368,7 +379,7 @@ input {
 }
 .landing .landingFeatures {
   display: flex;
-  background: #F8F6F5;
+  background: #f8f6f5;
   height: 38rem;
   width: 100vw;
 }
@@ -421,7 +432,7 @@ input {
 }
 @media (max-width:500px) {
   .landing .landingFeatures {
-    transform: translateY(8rem);
+    transform: translateY(6rem);
     height: 30rem;
   }
 }
@@ -435,7 +446,7 @@ input {
 }
 @media (max-width:500px) {
   .landing .landingContact {
-    transform: translateY(8rem);
+    transform: translateY(3rem);
   }
 }
 .landing .landingContact .socialApps {
@@ -452,11 +463,6 @@ input {
 }
 .landing .landingContact .terms p {
   margin-bottom: 1rem;
-}
-@media (max-width:500px) {
-  .landing .landingContact .terms {
-    transform: translateY(8rem);
-  }
 }
 .dash {
   display: flex;
