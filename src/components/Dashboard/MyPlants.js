@@ -55,10 +55,11 @@ const MyPlants = () => {
     return(
         <div className="myPlants">
             <h2>My Plants</h2>
+            <div className='plantContainer'>
             {plants && plants.length !==0 ? plants.map(plant => {
                 
                 return(
-                    <div className="plantCard" >
+                    <div className="plantCard" key={plant.data.id}>
                         <h3>{plant.data.common_name}</h3>                        
                         <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
                         <p>{plant.data.plant_id}</p>                        
@@ -86,7 +87,7 @@ const MyPlants = () => {
                 </div>
             </div>            
     }
-            
+            </div>
         </div>
     )
 }

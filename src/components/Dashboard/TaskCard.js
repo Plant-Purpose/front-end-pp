@@ -1,18 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 
-const TaskCard = ({ title, task, deadline, id }) => {
+
+const TaskCard = props => {
     const deleteHandler = () => {
-
     }
-
-    return(
+    console.log(props.task)
+    return (
         <div className="taskCard">
-            {/* <h2>{title}</h2>
-            <p>{task}</p>
-            <p>Due By: {deadline}</p> */}
+            <h2>{props.task.title}</h2>
+            <p>{props.task.task}</p>
+            <p>Due By: {props.task.deadline}</p>
         </div>
     )
 }
-
 export default TaskCard;

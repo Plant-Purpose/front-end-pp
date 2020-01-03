@@ -679,7 +679,6 @@ input {
   }
 }
 .dash .middleDash .myPlants {
-  display: flex;
   font-family: Poppins;
   line-height: 2.7rem;
   background: #FFFFFF;
@@ -689,20 +688,21 @@ input {
   height: 350px;
   width: 100%;
   margin: 1%;
+  overflow: hidden;
 }
-.dash .middleDash .myPlants .plantCard {
+.dash .middleDash .myPlants .plantContainer .plantCard {
   display: flex;
 }
-.dash .middleDash .myPlants .plantCard img {
+.dash .middleDash .myPlants .plantContainer .plantCard img {
   width: 150px;
   height: 150px;
 }
-.dash .middleDash .myPlants h2 {
+.dash .middleDash .myPlants .plantContainer h2 {
   text-align: left;
   margin: 3% 5%;
 }
 @media (max-width:800px) {
-  .dash .middleDash .myPlants {
+  .dash .middleDash .myPlants .plantContainer {
     height: fit-content;
   }
 }
