@@ -19,6 +19,7 @@ const Dashboard = () => {
     
     return(
         <div className='dash'>
+            
             <div className='leftDash'>
                 <Menu/>
             </div>
@@ -28,6 +29,7 @@ const Dashboard = () => {
                 <MyPlants/>
                 <MyTasks/>
             </div>
+            
 
             <div className='rightDash'>
 

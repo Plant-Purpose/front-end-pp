@@ -46,13 +46,15 @@ const AddPlant = (props) => {
     }
 
     return(
-        <div>
-            <form onSubmit={handleSearch}>
+        <div className='add-container'>
+            <form onSubmit={handleSearch} className='add-form'>
                 <h2>Add a Plant</h2>
-                <input type='text' name="common_name" placeholder="Find Plant" onChange={handleInput}/>
-                <button type='submit'>Search</button>
+                <div className='search'>
+                    <input className='find-plant' type='text' name="common_name" placeholder="Find Plant" onChange={handleInput} />
+                    <i class="icon-search" aria-hidden="true"></i>
+                </div>
             </form>
-            <div>
+            <div className='task-box'>
                 <AddTask/>
             </div>  
         </div>

@@ -86,7 +86,7 @@ const Register = props => {
         onChange={handleChange}
       />
 
-      <button type='submit'> Register </button>
+      <button className='button' type='submit'> Register </button>
       </form>
     </>
   )

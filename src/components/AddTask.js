@@ -4,10 +4,10 @@ import authAxios from "../util/authAxios";
 const AddTask = (props) => {
     const [task, setTask] = useState()
  return(
-     <div>
+     <div className='inner-task-box'>
          <h3>Add Task</h3>
-         <input type="text" name="task" placeholder="Enter Task"/>
-         <button>Save Task</button>
+         <textarea type="text" name="task" placeholder="Enter Task"/>
+         <button className='button'>Save Task</button>
      </div>
  )
 }

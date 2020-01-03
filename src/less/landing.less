@@ -2,17 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+
   .landingBody {
     display:flex;
     width: 100vw;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 38rem;
+
     div {
       width: 50%;
       margin: auto;
       text-align: center;
       justify-content: center;
+
       h1 {
         /* Headline 1/Regular */
         font-family: 'Poppins';
@@ -30,6 +33,7 @@
         text-align: center;
         justify-content: center;
       }
+
       h1.greenheader {
         /* Headline 1/Regular */
         font-family: 'Poppins';
@@ -47,6 +51,7 @@
 
         text-align: center;
       }
+
       h3 {
         /* Headline 3/Regular */
         font-family: Poppins;
@@ -63,45 +68,67 @@
         text-align: center;
       }
     }
-    button.signin {
-      /* Button Text */
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 21px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: 0.08em;
 
-      /* Background color */
-      color: #F8F6F5;
-
-      /* Primary Color */
-      background: #397D54;
-      border-radius: 4px;
-
-      margin: auto;
-
+    .potted {
+      margin: auto 0;
+      width: 40vw;
+      height: 40vw;
     }
+
     img {
       width: 50%;
     }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column-reverse;
+      transform: translateY(6rem);
+      margin: 0 auto;
+
+      div {
+        align-items: center;
+        width: 70vw;
+        // padding: 0;
+        // margin: 0;
+
+        h1 {
+          padding: 0;
+          margin: 0;
+        }
+
+        h3 {
+          width: 65vw;
+          padding: 0;
+          margin: 3rem auto;
+        }
+
+      }
+      .potted {
+        width: 45vw;
+        height: 45vw;
+        margin: 3rem auto 0;
+        padding: 0;
+      }
+    }
   }
+
   .landingFeatures {
     display: flex;
     background: #F8F6F5;
     height: 38rem;
     width: 100vw;
+
     img.sideLeaf {
       @media @large {
         width: 5rem;
       }
+
       @media @small {
+        transform: translateY(6rem);
         display: none;
+        padding: 0 5rem;
       }
     }
+
     div {
       margin: auto;
       h6 {
@@ -122,9 +149,9 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
+
       p {
         /* Headline 4/Regular */
-
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
@@ -140,7 +167,13 @@
         justify-content: center;
       }
     }
+
+    @media @small {
+      transform: translateY(8rem);
+      height: 30rem;
+    }
   }
+
   .landingContact {
     margin: auto;
     margin-top: 5rem;
@@ -148,11 +181,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media @small {
+      transform: translateY(8rem);
+    }
+
     .socialApps {
       display:flex;
       justify-content: space-evenly;
       width: 100%;
-      margin-bottom: 2rem;   }
+      margin-bottom: 2rem;   
+    }
+    
     .terms { 
       width: 100%;
 
@@ -161,6 +201,11 @@
       margin-top: 2rem;
       p {
         margin-bottom: 1rem;
-      }    }
+      }   
+
+      @media @small {
+        transform: translateY(8rem);
+      } 
+    }
   }
 }

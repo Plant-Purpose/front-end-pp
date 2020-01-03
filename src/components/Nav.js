@@ -2,6 +2,11 @@ import React from 'react'
 
 
 const Nav = (props) => {
+    const logout = e => {
+        e.preventDefault();
+        localStorage.removeItem('token');
+        props.history.push('/')
+    }
     const signedIn = localStorage.getItem('token');    
     return(
         <div className='nav'>
@@ -11,16 +16,16 @@ const Nav = (props) => {
                 <img src='images/Nav/Plant_Purpose.svg' alt="plant purpose text"/>
             </div>
 
-            <div className="button">
+            <div className='nav-container'>
 
                 {signedIn && signedIn.length ? 
                 <div className="loggedInButts">
-                    <button className='signup'> Logout </button>
+                    <button className='signup button' onClick={logout}> Logout </button>
                 </div>
                 :
                 <div className="loggedOutButts">
-                    <button className='signin' onClick={() => props.history.push('/login')}> Sign In</button>
-                    <button className='signup' onClick={() => props.history.push('/register')}> Sign Up </button>
+                    <button className='signin button' onClick={() => props.history.push('/login')}> Sign In</button>
+                    <button className='button' onClick={() => props.history.push('/register')}> Sign Up </button>
                 </div>
                 }     
                 

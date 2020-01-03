@@ -53,7 +53,7 @@ const Login = (props) => {
 
                     <p id='error-text'>{errors.password}</p>
 
-                    <button type='submit'>Login</button>
+                    <button className='button' type='submit'>Login</button>
                     
                 </form>
             </div>

@@ -7,19 +7,17 @@ const LandingPage = (props) => {
     <div className='landing'>
 
       <div className='landingBody'>
-
         <div>
           <h1> Welcome to  </h1>
           <h1 className='greenheader'> Plant Purpose </h1>
           <h3> A plant managment service, which helps plant owners take better care of their plants </h3>
-          <button className='signin' onClick={() => props.history.push('/register')}> Sign Up Now </button>
+          <button className='button' onClick={() => props.history.push('/register')}> Sign Up Now </button>
         </div>
-
-        <img src="images/Landing/landingBody.svg" alt="home page plant"/>
+        <img className='potted' src="images/Landing/pottedPlant.jpg" alt="home page plant"/>
       </div>
 
       <div className='landingFeatures'>
-        <img className='sideLeaf' src="images/Landing/landingFeature.svg" alt="home page feature plant"/>
+        <img className='sideLeaf' id='side-l' src="images/Landing/landingFeature.svg" alt="home page feature plant"/>
 
         <div>
           <img className='featureImg' src="images/Landing/landingFeat1.svg" alt="home page feature 1"/>

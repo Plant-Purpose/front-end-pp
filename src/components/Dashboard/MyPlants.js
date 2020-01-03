@@ -31,11 +31,22 @@ const MyPlants = () => {
         })      
     }, [plantid.id])
 
-    const displayModal = () => {
-        const modal = document.querySelector('#add-modal');
+    const displayModal = (e) => {
+        e.preventDefault();
 
-        modal.style.display === 'none' ? modal.style.display = 'block'
-                                       : modal.style.display = 'none';
+        const modal = document.querySelector('#add-modal');
+        const content = document.querySelector('.modal-content');
+
+        modal.style.height === '0%' ? modal.style.height = '100%'
+                                    : modal.style.height = '0%';
+        
+        if( content.style.opacity === '0') {
+            setTimeout(() => {
+                content.style.opacity = '100%'
+            }, 200);
+        } else {
+            content.style.opacity = '0';
+        }
     }
 
     return(
@@ -53,7 +64,7 @@ const MyPlants = () => {
             }): 
             <div className="add-plant" >
                 <h2>My Plants</h2>
-                <button onClick={displayModal}>Add Plant</button>
+                <button className='button' onClick={e => displayModal(e)}>Add Plant</button>
 
                 <div className="add-modal" id="add-modal">
                     <div className="modal-content">
@@ -62,8 +73,10 @@ const MyPlants = () => {
                             <AddPlant />
                         </div>
                         <div className="right-col">
-                            <div className="img-uploader"></div>
-                            <button>Add Plant</button>
+                            <div className="img-uploader">
+                                <p>Upload <br /> Image</p>
+                            </div>
+                            <button className='button' id='bjs-special-button-that-needs-special-styling-for-some-reason'>Add Plant</button>
                         </div>
                     </div>
                 </div>
