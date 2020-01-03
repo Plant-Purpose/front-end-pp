@@ -3,10 +3,10 @@ import AddTaskPanel from '../AddTaskPanel';
 
 const Menu = () => {
   const toggleTaskPanel = (e) => {
-    e.stopPropagation()
+  
     const panel = document.querySelector('.task-panel');
     const menu = document.querySelector('.tasks');
-
+    console.log(panel)
     menu.classList.toggle('dark');
     panel.classList.toggle('show');
   }
@@ -14,8 +14,8 @@ const Menu = () => {
   return (
     <>
       <div className='menuUserBox'>
-      <img src="images/Menu/profile.svg" alt="profile picture example"/>
-        <p> user modal drop down here </p>
+      <img src="images/Menu/profile.svg" alt="profile  example"/>
+        <p> Welcome </p>
       </div>
 
       <div className="menu">

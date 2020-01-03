@@ -15,16 +15,18 @@ import Tasks from "./components/Tasks";
 function App() {
 	return (
 		<div className='App'>
-			<Route path='/' render={props => <Nav {...props} />} />
-			<Switch>
-				<Route exact path='/' render={props => <LandingPage {...props} />} />
-				<Route exact path='/register' render={props => <Register {...props} />} />
-				<Route exact path='/login' render={props => <Login {...props} />} />
-				<Route exact path="/dashboard" render={props => <Dashboard {...props}/>}/>
-				<Route exact path='/add-plant' render={props => <AddPlant {...props} />} />
-				<Route exact path='/add-task' render={props => <AddTask {...props} />} />
-				<Route exact path='/tasks' render={props => <Tasks {...props} />} />
-			</Switch>
+			<div className='app-wrap'>
+				<Route path='/' render={props => <Nav {...props} />} />
+				<Switch>
+					<Route exact path='/' render={props => <LandingPage {...props} />} />
+					<Route exact path='/register' render={props => <Register {...props} />} />
+					<Route exact path='/login' render={props => <Login {...props} />} />
+					<Route exact path="/dashboard" render={props => <Dashboard {...props}/>}/>
+					<Route exact path='/add-plant' render={props => <AddPlant {...props} />} />
+					<Route exact path='/add-task' render={props => <AddTask {...props} />} />
+					<Route exact path='/tasks' render={props => <Tasks {...props} />} />
+				</Switch>
+			</div>
 		</div>
 	);
 }

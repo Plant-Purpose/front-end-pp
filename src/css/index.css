@@ -128,6 +128,9 @@ table {
 }
 .App {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 98vw;
   text-align: center;
 }
 .App input {
@@ -155,18 +158,34 @@ table {
   border-radius: 4px;
   margin: auto;
 }
-.log-reg-contain {
-  height: 85vh;
-  overflow: hidden;
+html::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.5rem;
+  background-color: #1b3b28;
 }
-.log-reg-contain .login-register {
+html::-webkit-scrollbar-thumb {
+  background: #49a010;
+}
+html {
+  overflow-x: hidden;
+}
+.form-contain {
+  background-image: url(/images/leaves.jpg);
+  background-size: cover;
+  min-height: 90vh;
+  padding-top: 5rem;
+}
+.form-contain .login-register {
   font-family: 'Poppins';
   background-color: #f1f1f1;
   width: 30vw;
-  margin: 5rem auto 0;
+  margin: 0 auto;
   padding-bottom: 1rem;
 }
-.log-reg-contain .login-register .log-reg-head {
+.form-contain .login-register input {
+  border: 1px solid green;
+}
+.form-contain .login-register .log-reg-head {
   display: flex;
   justify-content: space-around;
   background-color: lightgray;
@@ -176,33 +195,33 @@ table {
   font-weight: 500;
   font-size: 1.5rem;
 }
-.log-reg-contain .login-register .log-reg-head h2 {
+.form-contain .login-register .log-reg-head h2 {
   padding-top: 0.9rem;
 }
-.log-reg-contain .login-register .log-reg-head .active-header {
+.form-contain .login-register .log-reg-head .active-header {
   border-bottom: 0.2rem solid green;
 }
-.log-reg-contain .login-register .log-reg-desc {
+.form-contain .login-register .log-reg-desc {
   padding: 0 3rem;
 }
-.log-reg-contain .login-register .log-reg-desc h2 {
+.form-contain .login-register .log-reg-desc h2 {
   font-size: 1.5rem;
   font-weight: bolder;
   margin: 2rem 0;
 }
-.log-reg-contain .login-register .log-reg-desc p {
+.form-contain .login-register .log-reg-desc p {
   margin-bottom: 3rem;
 }
 @media (max-width:1000px) {
-  .log-reg-contain .login-register {
+  .form-contain .login-register {
     width: 70vw;
   }
-  .log-reg-contain .login-register input {
+  .form-contain .login-register input {
     min-width: 50%;
   }
 }
 @media (max-width:500px) {
-  .log-reg-contain .login-register {
+  .form-contain .login-register {
     width: 70vw;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -210,12 +229,14 @@ table {
 }
 .nav {
   display: flex;
-  height: 8vh;
+  height: 4rem;
+  margin-bottom: 0 !important;
 }
 .nav .mainNav {
   width: 50%;
   display: flex;
-  margin: 0.5rem 2rem 0;
+  margin-left: 4rem;
+  margin-top: 0.5rem;
 }
 .nav .mainNav img {
   justify-content: flex-start;
@@ -288,6 +309,7 @@ table {
 }
 .landing .landingBody {
   display: flex;
+  min-height: 90vh;
   width: 100vw;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -475,7 +497,7 @@ table {
   justify-content: space-between;
   background: #F8F9FA;
   font-family: Poppins;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 @media (max-width:1000px) {
@@ -820,7 +842,7 @@ table {
 .dash .rightDash .addPlant {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   padding: 5% 0;
   background: #FFFFFF;
   border: 1px solid #F8F6F5;
@@ -835,11 +857,7 @@ table {
     width: 100%;
   }
 }
-.add-plant {
-  width: 50vw;
-  height: 50vh;
-}
-.add-plant .add-modal {
+.add-modal {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -849,27 +867,27 @@ table {
   background-color: #F8F6F5;
   transition: height 750ms ease;
 }
-.add-plant .add-modal .close {
+.add-modal .close {
   position: absolute;
   top: 15px;
   right: 25px;
   font-size: 24px;
   cursor: pointer;
 }
-.add-plant .add-modal .modal-content {
+.add-modal .modal-content {
   opacity: 0.01;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   transition: opacity 700ms ease;
 }
-.add-plant .add-modal .modal-content .left-col {
+.add-modal .modal-content .left-col {
   height: 100%;
   width: 100%;
 }
-.add-plant .add-modal .modal-content .right-col {
+.add-modal .modal-content .right-col {
   height: 100%;
   width: 100%;
   display: flex;
@@ -877,7 +895,7 @@ table {
   justify-content: center;
   align-items: center;
 }
-.add-plant .add-modal .modal-content .right-col .img-uploader {
+.add-modal .modal-content .right-col .img-uploader {
   height: 450px;
   width: 300px;
   background-color: lightgrey;
@@ -889,7 +907,7 @@ table {
   color: rgba(255, 255, 255, 0.5);
   margin: 30px;
 }
-.add-plant .add-modal .modal-content .right-col #bjs-special-button-that-needs-special-styling-for-some-reason {
+.add-modal .modal-content .right-col #bjs-special-button-that-needs-special-styling-for-some-reason {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -943,16 +961,15 @@ table {
 }
 .task-box .inner-task-box h3 {
   font-size: 24px;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 .task-box .inner-task-box textarea {
   max-width: 200px;
 }
 .task-panel {
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
+  top: 36.1%;
+  left: 21%;
   background-color: #CBEAD1;
   padding: 20px;
   opacity: 0;
@@ -964,8 +981,22 @@ table {
 }
 .show {
   opacity: 100;
-  z-index: 1;
+  z-index: 10000000000;
 }
 .tasks {
   transition: background-color 500ms ease;
+}
+.inner-task-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.inner-task-box h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.inner-task-box textarea {
+  max-width: 200px;
 }

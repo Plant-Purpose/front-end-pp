@@ -1,8 +1,7 @@
 .task-panel {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
+    top: 36.1%;
+    left: 21%;
 
     background-color: #CBEAD1;
     padding: 20px;
@@ -12,15 +11,34 @@
     transition: opacity 600ms ease;
 }
 
+
 .dark {
     background-color: #CBEAD1;
 }
 
 .show {
     opacity: 100;
-    z-index: 1;
+    z-index: 10000000000;
 }
 
 .tasks {
     transition: background-color 500ms ease;
+}
+
+.inner-task-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    textarea {
+        max-width: 200px;
+    }
 }

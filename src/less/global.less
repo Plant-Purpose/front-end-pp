@@ -1,6 +1,9 @@
 .App {
   width: 100vw;
-  text-align: center;  
+  display: flex;
+	flex-direction: column;
+	min-width: 98vw;
+	text-align: center;
 
   input {
     border: 1px solid green;
@@ -34,4 +37,18 @@
   border-radius: 4px;
 
   margin: auto;
+}
+
+html::-webkit-scrollbar {
+	width: 0.4rem;
+	height: 0.5rem;
+	background-color: #1b3b28;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: #49a010;
+}
+
+html {
+  overflow-x: hidden;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import AddPlant from '../AddPlant'
 
 
 const AddPlantImage = () => {
@@ -8,7 +9,7 @@ const AddPlantImage = () => {
 
         const modal = document.querySelector('#add-modal');
         const content = document.querySelector('.modal-content');
-        console.log(modal, content)
+        
         if(modal && modal.style) {
             modal.style.height === '0%' ? modal.style.height = '100%'
                                         : modal.style.height = '0%';
@@ -24,10 +25,27 @@ const AddPlantImage = () => {
     }
     
     return (
-        <div className="addPlant">           
+        <div className="addPlant" >           
             <img src='images/empty_pot.svg' alt='Empty Pot'/>
             <img src='images/plus.svg' alt='plus sign' className='plusSign' onClick={displayModal} style={{ cursor: "pointer" }}/>
-            <p onClick={displayModal} style={{ cursor: "pointer" }}>Add Plants</p>            
+            <p onClick={displayModal} style={{ cursor: "pointer" }}>Add Plants</p>      
+
+      
+                <div className="add-modal" id="add-modal">
+                    <div className="modal-content">
+                        <div className="close" onClick={displayModal}>&times;</div>
+                        <div className="left-col">
+                            <AddPlant />
+                        </div>
+                        <div className="right-col">
+                            <div className="img-uploader">
+                                <p>Upload <br /> Image</p>
+                            </div>
+                            <button className='button' id='bjs-special-button-that-needs-special-styling-for-some-reason'>Add Plant</button>
+                        </div>
+                    </div>
+                </div>
+    
         </div>
     )
 }

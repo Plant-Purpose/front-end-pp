@@ -38,6 +38,7 @@ const Nav = props => {
                     src='images/Nav/Plant_Purpose.svg' 
                     alt="plant purpose text" 
                     onClick={home} 
+                    style={{ cursor: 'pointer' }}
                 />
             </div>
 
