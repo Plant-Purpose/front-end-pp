@@ -127,7 +127,9 @@ table {
   border-spacing: 0;
 }
 .App {
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 98vw;
   text-align: center;
 }
 #error-text {
