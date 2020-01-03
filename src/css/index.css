@@ -189,6 +189,23 @@ input {
 .login-register .log-reg-desc p {
   margin-bottom: 3rem;
 }
+@media (max-width:1000px) {
+  .login-register {
+    width: 70vw;
+  }
+  .login-register input {
+    min-width: 50%;
+  }
+}
+@media (max-width:500px) {
+  .login-register {
+    width: 70vw;
+  }
+}
+.login-register input {
+  width: 70%;
+  border: 1px solid black;
+}
 .nav {
   display: flex;
 }
@@ -361,7 +378,7 @@ input {
     width: 5rem;
   }
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .landing .landingFeatures img.sideLeaf {
     transform: translateY(6rem);
     display: none;
@@ -403,7 +420,7 @@ input {
   color: #000000;
   justify-content: center;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .landing .landingFeatures {
     transform: translateY(8rem);
     height: 30rem;
@@ -417,7 +434,7 @@ input {
   flex-wrap: wrap;
   width: 100%;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .landing .landingContact {
     transform: translateY(8rem);
   }
@@ -437,7 +454,7 @@ input {
 .landing .landingContact .terms p {
   margin-bottom: 1rem;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .landing .landingContact .terms {
     transform: translateY(8rem);
   }
@@ -455,7 +472,7 @@ input {
     flex-direction: column;
   }
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash {
     flex-direction: column;
   }
@@ -480,7 +497,7 @@ input {
     margin: 1%;
   }
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .leftDash {
     width: 100%;
   }
@@ -508,7 +525,7 @@ input {
     font-size: 1rem;
   }
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .leftDash .menuUserBox {
     font-size: 1.2rem;
     height: 100px;
@@ -519,7 +536,7 @@ input {
   padding: 5% 0;
   border-bottom: 2px solid #F8F6F5;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .leftDash .menu {
     padding: 1%;
   }
@@ -554,7 +571,7 @@ input {
 .dash .leftDash .menu .notes img {
   margin-right: 10%;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .leftDash .menu .dashboard,
   .dash .leftDash .menu .plants,
   .dash .leftDash .menu .tasks,
@@ -597,7 +614,7 @@ input {
 .dash .leftDash .userpref .notifications img {
   margin-right: 10%;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .leftDash .userpref .settings,
   .dash .leftDash .userpref .notifications {
     justify-content: center;
@@ -628,7 +645,7 @@ input {
     margin: 1%;
   }
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .middleDash {
     width: 95%;
   }
@@ -666,7 +683,7 @@ input {
   line-height: 1.8rem;
   font-size: 1.2rem;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .middleDash .notifBar .plants,
   .dash .middleDash .notifBar .plantsNo,
   .dash .middleDash .notifBar .tasks,
@@ -679,6 +696,7 @@ input {
   }
 }
 .dash .middleDash .myPlants {
+  text-align: left;
   font-family: Poppins;
   line-height: 2.7rem;
   background: #FFFFFF;
@@ -689,6 +707,9 @@ input {
   width: 100%;
   margin: 1%;
   overflow: hidden;
+}
+.dash .middleDash .myPlants .plantContainer {
+  display: flex;
 }
 .dash .middleDash .myPlants .plantContainer .plantCard {
   display: flex;
@@ -701,12 +722,12 @@ input {
   text-align: left;
   margin: 3% 5%;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
   .dash .middleDash .myPlants .plantContainer {
     height: fit-content;
   }
 }
-.dash .middleDash .myTasks {
+.dash .myTasks {
   display: flex;
   font-family: Poppins;
   line-height: 2.7rem;
@@ -718,23 +739,23 @@ input {
   width: 100%;
   margin: 1%;
 }
-.dash .middleDash .myTasks h2 {
+.dash .myTasks h2 {
   font-weight: bold;
 }
-.dash .middleDash .myTasks .taskCard {
+.dash .myTasks .taskCard {
   border: 1px solid #F8F6F5;
 }
-.dash .middleDash .myTasks .taskCard h2 {
+.dash .myTasks .taskCard h2 {
   text-align: left;
   margin: 3% 5%;
   font-weight: bold;
 }
-@media (max-width:800px) {
-  .dash .middleDash .myTasks .taskCard {
+@media (max-width:500px) {
+  .dash .myTasks .taskCard {
     height: fit-content;
   }
 }
-.dash .rightDash {
+.rightDash {
   display: flex;
   flex-direction: column;
   margin-top: 2%;
@@ -743,24 +764,24 @@ input {
   height: 900px;
 }
 @media (max-width:1000px) {
-  .dash .rightDash {
+  .rightDash {
     width: 20%;
   }
 }
-@media (max-width:800px) {
-  .dash .rightDash {
+@media (max-width:500px) {
+  .rightDash {
     width: 100%;
   }
 }
-.dash .rightDash .calendar {
+.rightDash .calendar {
   margin-bottom: 10%;
 }
-@media (max-width:800px) {
-  .dash .rightDash .calendar {
+@media (max-width:500px) {
+  .rightDash .calendar {
     margin: auto;
   }
 }
-.dash .rightDash .addPlant {
+.rightDash .addPlant {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -770,11 +791,11 @@ input {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.dash .rightDash .addPlant .plusSign {
+.rightDash .addPlant .plusSign {
   margin: 5%;
 }
 @media (max-width:1240px) {
-  .dash .rightDash .addPlant {
+  .rightDash .addPlant {
     width: 100%;
   }
 }

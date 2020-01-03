@@ -32,7 +32,7 @@ const MyPlants = () => {
             console.log(error);
         })      
     }, [userId])
-    // console.log(plants, plantIDs)
+    console.log(plants, plantIDs)
 
     const displayModal = (e) => {
         e.preventDefault();
@@ -60,7 +60,7 @@ const MyPlants = () => {
                 
                 return(
                     <div className="plantCard" key={plant.data.id}>
-                        <h3>{plant.data.common_name}</h3>                        
+                        <h3>{plant.data.name}</h3>                        
                         <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
                         <p>{plant.data.plant_id}</p>                        
                     </div>
