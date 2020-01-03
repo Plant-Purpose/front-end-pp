@@ -19,6 +19,7 @@ const Login = (props) => {
         axiosAuth()
         .post('/api/login', user)
         .then(response => {
+            console.log(response)
             localStorage.setItem('token', response.data.token);
             props.history.push('/dashboard');
         })
@@ -49,7 +50,7 @@ const Login = (props) => {
                         value={user.password}
                         onChange={handleChange}
                     /> 
-                    
+
                     <p id='error-text'>{errors.password}</p>
 
                     <button type='submit'>Login</button>
