@@ -164,22 +164,28 @@
         }
         .myPlants{
             text-align: left;
-
             font-family: Poppins;
             line-height: 2.7rem;
             background: #FFFFFF;
             border: 1px solid #F8F6F5;
             box-sizing: border-box;
             border-radius: 4px;
-            height: 350px;
+            // height: fit-content;
             width: 100%;
             margin: 1%;
             overflow: hidden;
+            h2{
+                font-weight: bold;
+                margin: 2%;
+            }
             .plantContainer{
                 display: flex;
+                justify-content: space-evenly;
 
                 .plantCard{
                     display: flex;
+                    flex-direction: column;
+                    padding-bottom: 2%;
                     img{
                         width: 150px;
                         height: 150px;
@@ -197,6 +203,7 @@
     }
         .myTasks{
             display: flex;
+            flex-direction: column;
             font-family: Poppins;
             line-height: 2.7rem;
             background: #FFFFFF;
@@ -208,21 +215,25 @@
             margin: 1%;
             h2{
                 font-weight: bold;
-            }
-
-            .taskCard{
-                    border: 1px solid #F8F6F5;
-
-            
-            h2{
                 text-align: left;
-                margin: 3% 5%;
-                font-weight: bold;
+                margin: 2%;
             }
-            @media @small{
-                height: fit-content;
-            }
-        }        
+            .taskContainer{
+                width: 80%;     
+                
+                .taskCard{
+                    border: 1px solid #F8F6F5;
+                    background: #F8F9FA;
+                    border-radius: 4px;
+                    height: fit-content;
+                    h2{                    
+                        font-weight: bold;
+                    }
+                    @media @small{
+                        height: fit-content;
+                    }
+            }     
+        }   
     }
     }
     .rightDash{

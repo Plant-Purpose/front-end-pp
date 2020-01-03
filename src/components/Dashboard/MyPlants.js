@@ -57,11 +57,12 @@ const MyPlants = () => {
             <h2>My Plants</h2>
             <div className='plantContainer'>
             {plants && plants.length !==0 ? plants.map(plant => {
+                console.log(plant)
                 return(
-                plants.images && plants.images.length ?                 
+                plant.data.images && plant.data.images.length !==0 ?                 
                     <div className="plantCard" key={plant.data.id}>
-                        <h3>{plant.data.name}</h3>                        
                         <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
+                        <h3>{plant.data.name}</h3>
                         <p>{plant.data.plant_id}</p>                        
                     </div>: null
                 )}): 

@@ -702,16 +702,22 @@ input {
   border: 1px solid #F8F6F5;
   box-sizing: border-box;
   border-radius: 4px;
-  height: 350px;
   width: 100%;
   margin: 1%;
   overflow: hidden;
 }
+.dash .middleDash .myPlants h2 {
+  font-weight: bold;
+  margin: 2%;
+}
 .dash .middleDash .myPlants .plantContainer {
   display: flex;
+  justify-content: space-evenly;
 }
 .dash .middleDash .myPlants .plantContainer .plantCard {
   display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
 }
 .dash .middleDash .myPlants .plantContainer .plantCard img {
   width: 150px;
@@ -728,6 +734,7 @@ input {
 }
 .dash .myTasks {
   display: flex;
+  flex-direction: column;
   font-family: Poppins;
   line-height: 2.7rem;
   background: #FFFFFF;
@@ -740,17 +747,23 @@ input {
 }
 .dash .myTasks h2 {
   font-weight: bold;
-}
-.dash .myTasks .taskCard {
-  border: 1px solid #F8F6F5;
-}
-.dash .myTasks .taskCard h2 {
   text-align: left;
-  margin: 3% 5%;
+  margin: 2%;
+}
+.dash .myTasks .taskContainer {
+  width: 80%;
+}
+.dash .myTasks .taskContainer .taskCard {
+  border: 1px solid #F8F6F5;
+  background: #F8F9FA;
+  border-radius: 4px;
+  height: fit-content;
+}
+.dash .myTasks .taskContainer .taskCard h2 {
   font-weight: bold;
 }
 @media (max-width:500px) {
-  .dash .myTasks .taskCard {
+  .dash .myTasks .taskContainer .taskCard {
     height: fit-content;
   }
 }

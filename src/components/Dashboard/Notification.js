@@ -19,55 +19,38 @@ const Notification =() => {
                 authAxios().get(`https://plant-purpose.herokuapp.com/api/users/${userID}/tasks`)
             ]);
 
-            console.log('RESULT', result)
+            setNotification({
+                plants: [ ...result[0].data ],
+                tasks: [ ...result[1].data ],
+                notes: [],
+                notifications: []
+            })
         }
+
+        getData()
    
-    //     authAxios()
-    //     .get('')
-    //     .then(response => {
-    //         setNotification(response.data);
-    //     })
-    //     .catch(error => {
-    //         console.log(error)
-    //     })
-    }, [notification])         
+    }, [])         
                 
-                
+    const plantImg = notification.plants.length > 0 ? 'images/Notifications/leaf_green.svg' : 'images/Notifications/leaf_black.svg'
+    const taskImg = notification.tasks.length > 0 ? 'images/Notifications/task_green.svg' :'images/Notifications/task_black.svg'
     return(
         <div>
             <div className="notifBar">
 
-                {notification.plants && notification.plants.length !== 0 ?                  
-                    notification.plants.map(notif => {
-                        return(
-                        <div className='plants'>
-                            <img src='images\Notifications\leaf_green.svg' alt='green leaf'/>
-                            <p>{notification.plants.length}<br/>
-                            Plants</p>
-                        </div>
-                        )}):                
-                    <div className='plantsNo'>
-                        <img src='images\Notifications\leaf_black.svg' alt='black leaf'/>
-                        <p>0<br/>
-                        Plants</p>
-                    </div>
-                }
+            <div className={ notification.plants.length > 0 ? 'plants' : 'plantsNo' }>
+                <img src={plantImg} alt='green leaf'/>
+                <p>{notification.plants.length}<br/>
+                Plants</p>
+            </div>
+                     
 
-                {notification.tasks && notification.tasks.length !== 0 ?                 
-                    notification.tasks.map(notif => {
-                        return(
-                        <div className='tasks'>
-                            <img src='images\Notifications\task_green.svg' alt='green task'/>
-                            <p>{notif.tasks.length}<br/>
-                            Tasks</p>
-                        </div>
-                        )}):                
-                    <div className='tasksNo'>
-                        <img src='images\Notifications\task_black.svg' alt='black task'/>
-                        <p>0<br/>
-                        Tasks</p>
-                    </div>
-                }
+            <div className={ notification.tasks.length > 0 ? 'tasks' : 'tasksNo' }>
+                <img src='images\Notifications\task_green.svg' alt='green task'/>
+                <p>{notification.tasks.length}<br/>
+                Tasks</p>
+            </div>
+                                    
+
 
                 {notification.notifications && notification.notifications.length !== 0 ?                 
                     notification.notifications.map(notif => {

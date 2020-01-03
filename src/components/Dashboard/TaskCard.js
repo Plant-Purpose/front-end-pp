@@ -11,13 +11,13 @@ const TaskCard = props => {
                 console.log(err)
             });
     }
-    console.log(props.task)
+
     return (
         <div className="taskCard">
             <h2>{props.task.title}</h2>
             <p>{props.task.task}</p>
             <p>Due By: {props.task.deadline}</p>
-            <p onClick={deleteHandler}>Delete</p>
+            <p style={{ cursor: 'pointer' }} onClick={deleteHandler}>Delete</p>
         </div>
     )
 }

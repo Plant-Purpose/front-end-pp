@@ -51,7 +51,9 @@ const AddPlant = props => {
             <form onSubmit={handleSearch} className='add-form'>
                 <h2>Add a Plant</h2>
                 <div className='search'>
-                    <input className='find-plant' type='text' name="common_name" placeholder="Find Plant" onChange={handleInput} />
+                    <selection className='find-plant' type='text' name="common_name" placeholder="Find Plant" onChange={handleInput}> 
+                        <option></option>
+                    </selection>
                     <i className="icon-search" aria-hidden="true"></i>
                 </div>
             </form>
