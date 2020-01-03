@@ -61,9 +61,8 @@ const MyPlants = () => {
             <h2>My Plants</h2>
             <div className='plantContainer'>
             {plants && plants.length !==0 ? plants.map((plant, index) => {
-                return(
-                    plant.data.images && plant.data.images.length !==0 ?                
-                    <MyPlantsCard plant={plant} key={plant.data.id} plantId={plantIDs[index]}/>: null
+                return(                                   
+                    <MyPlantsCard plant={plant} key={plant.data.id} plantId={plantIDs[index]}/>
             )}): <button className='button' onClick={e => displayModal(e)}>Add Plant</button>
            
             }    

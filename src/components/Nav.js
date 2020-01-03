@@ -5,6 +5,8 @@ const Nav = props => {
     const logout = e => {
         e.preventDefault();
         localStorage.removeItem('token');
+        localStorage.removeItem('uid');
+        localStorage.removeItem('message');
         props.history.push('/')
     }
 
@@ -35,7 +37,7 @@ const Nav = props => {
 
                 {signedIn && signedIn.length ? 
                 <div className="loggedInButts">
-                    <button className='button'>Dashboard</button>
+                    <button className='button'onClick={() => props.history.push('/dashboard')}>Dashboard</button>
                     <button className='signup button' onClick={logout}> Logout </button>
                 </div>
                 :

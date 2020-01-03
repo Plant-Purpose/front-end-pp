@@ -7,6 +7,7 @@ const TaskCard = props => {
         axios.delete(`https://plant-purpose.herokuapp.com/api/users/${userId}/tasks/${props.task.id}`)
             .then(res => {
                 console.log(res)
+                window.location.reload();
             })
             .catch(err => {
                 console.log(err)

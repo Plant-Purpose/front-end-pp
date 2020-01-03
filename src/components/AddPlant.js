@@ -30,6 +30,7 @@ const AddPlant = props => {
         .post(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants`, plant)
         .then(response => {
             console.log('RESS', response)
+            window.location.reload() 
             // props.history.push('/dashboard')
         })
         .catch(error => {

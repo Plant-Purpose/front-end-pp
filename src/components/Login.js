@@ -21,7 +21,8 @@ const Login = props => {
 			.then(response => {
 				console.log(response);
 				localStorage.setItem('token', response.data.token);
-				localStorage.setItem('uid', response.data.id);
+                localStorage.setItem('uid', response.data.id);
+                localStorage.setItem('message', response.data.message);
 				props.history.push('/dashboard');
 			})
 			.catch(error => {

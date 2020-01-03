@@ -734,6 +734,9 @@ html {
   align-items: center;
   padding-bottom: 2%;
 }
+.dash .middleDash .myPlants .plantContainer .plantCard h3 {
+  text-align: center;
+}
 .dash .middleDash .myPlants .plantContainer .plantCard img {
   width: 150px;
   height: 150px;

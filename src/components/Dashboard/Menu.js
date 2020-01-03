@@ -1,11 +1,13 @@
 import React from 'react';
 import AddTaskPanel from '../AddTaskPanel';
+import AddNotesPanel from '../addNotesPanel';
 
 const Menu = () => {
   const toggleTaskPanel = (e) => {
   
     const panel = document.querySelector('.task-panel');
     const menu = document.querySelector('.tasks');
+    
   
     menu.classList.toggle('dark');
     panel.classList.toggle('show');
@@ -16,12 +18,12 @@ const Menu = () => {
 
     menu.classList.toggle('dark');
   }
-
+  const welcome = localStorage.getItem('message')
   return (
     <>
       <div className='menuUserBox'>
       <img src="images/Menu/profile.svg" alt="profile  example"/>
-        <p> Welcome </p>
+        <p>{welcome}</p>
       </div>
 
       <div className="menu">
@@ -32,7 +34,7 @@ const Menu = () => {
         <AddTaskPanel /> 
 
         <div className="notes" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleNotesPanel} > <img src='images/Menu/notes.svg' alt='notes'/> Notes </div>
-        
+        {/* <AddNotesPanel /> */}
       </div>
 
       <div className="userpref">
