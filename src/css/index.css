@@ -351,7 +351,7 @@ input {
 .landing .landingBody img {
   width: 50%;
 }
-@media screen and (max-width: 500px) {
+@media (max-width:500px) {
   .landing .landingBody {
     flex-direction: column-reverse;
     transform: translateY(6rem);
@@ -375,6 +375,11 @@ input {
     height: 45vw;
     margin: 3rem auto 0;
     padding: 0;
+  }
+}
+@media (max-width:500px) {
+  .landing .landingBody .sign-up {
+    border: 1px solid black;
   }
 }
 .landing .landingFeatures {
@@ -757,16 +762,24 @@ input {
   margin: 2%;
 }
 .dash .myTasks .taskContainer {
-  width: 80%;
+  width: 90%;
 }
 .dash .myTasks .taskContainer .taskCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border: 1px solid #F8F6F5;
   background: #F8F9FA;
   border-radius: 4px;
-  height: fit-content;
+  height: 100px;
+  margin: 1%;
 }
 .dash .myTasks .taskContainer .taskCard h2 {
+  font-size: 1.2rem;
   font-weight: bold;
+}
+.dash .myTasks .taskContainer .taskCard p {
+  font-size: 0.8rem;
 }
 @media (max-width:500px) {
   .dash .myTasks .taskContainer .taskCard {
@@ -776,6 +789,7 @@ input {
 .rightDash {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 2%;
   margin-right: 2%;
   width: 45%;
@@ -825,7 +839,7 @@ input {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 0%;
+  height: 0.01%;
   width: 100%;
   max-width: 50vw;
   background-color: #F8F6F5;

@@ -219,15 +219,24 @@
                 margin: 2%;
             }
             .taskContainer{
-                width: 80%;     
+                width: 90%;     
                 
                 .taskCard{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
                     border: 1px solid #F8F6F5;
                     background: #F8F9FA;
                     border-radius: 4px;
-                    height: fit-content;
-                    h2{                    
+                    height: 100px;
+                    margin: 1%;
+
+                    h2{            
+                        font-size:1.2rem;        
                         font-weight: bold;
+                    }
+                    p{
+                        font-size: 0.8rem;
                     }
                     @media @small{
                         height: fit-content;
@@ -239,6 +248,7 @@
     .rightDash{
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-top: 2%;
         margin-right: 2%;
         width: 45%;

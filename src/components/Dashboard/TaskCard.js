@@ -12,12 +12,18 @@ const TaskCard = props => {
             });
     }
 
+    const handleEdit = e =>{
+       
+
+    }
+
     return (
         <div className="taskCard">
             <h2>{props.task.title}</h2>
             <p>{props.task.task}</p>
             <p>Due By: {props.task.deadline}</p>
-            <p style={{ cursor: 'pointer' }} onClick={deleteHandler}>Delete</p>
+            <p style={{ cursor: 'pointer' }} onClick={deleteHandler}><img src='images/trash-solid.svg' alt="trash"/></p>
+            <p style={{ cursor: 'pointer' }} onClick={handleEdit}><img src='images/edit.svg' alt="edit"/></p>
         </div>
     )
 }

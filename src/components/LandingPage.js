@@ -13,7 +13,7 @@ const LandingPage = props => {
 						better care of their plants{' '}
 					</h3>
 					<button
-						className='button'
+						className='sign-up button'
 						onClick={() => props.history.push('/register')}
 					>
 						{' '}

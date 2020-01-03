@@ -79,7 +79,7 @@
 			width: 50%;
 		}
 
-		@media screen and (max-width: 500px) {
+		@media @small {
 			flex-direction: column-reverse;
 			transform: translateY(6rem);
 			margin: 0 auto;
@@ -106,6 +106,12 @@
 				height: 45vw;
 				margin: 3rem auto 0;
 				padding: 0;
+			}
+		}
+
+		.sign-up {
+			@media @small {
+				border: 1px solid black;
 			}
 		}
 	}

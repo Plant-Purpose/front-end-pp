@@ -8,15 +8,11 @@ import Notification from "./Notification";
 import AddPlantImage from "./AddPlantImage"
 
 const Dashboard = () => {
-    const [date, setDate] = useState({ date: '' })
+    const [date, setDate] = useState({ value: new Date() })
 
-	const handleChange = e => {
-		setDate({
-			...date,
-			[e.target.name]: e.target.value
-		});
-    };
+	const handleChange = value => setDate([value]);
     
+    console.log("date", date)
     return(
         <div className='dash'  style={{position: 'relative'}}>
             <div className='leftDash'>
@@ -28,14 +24,11 @@ const Dashboard = () => {
                 <MyTasks/>
             </div>
             <div className='rightDash'>
-            <Calendar
-            type='date'
-            name='date'
-            // value={date.date}
+            <Calendar 
+            value={date.value}
             onChange={handleChange}
             className="calendar"
             />
-
             <AddPlantImage/>
 
             </div>
