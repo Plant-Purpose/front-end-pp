@@ -1,6 +1,7 @@
 .App {
 	width: 100vw;
 	text-align: center;
+	// overflow-x: hidden;
 }
 
 #error-text {
@@ -36,6 +37,12 @@ input {
 	border: 1px solid green;
 }
 
-// html {
-// 	overflow: hidden;
-// }
+html::-webkit-scrollbar {
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: #1b3b28;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: #49a010;
+}

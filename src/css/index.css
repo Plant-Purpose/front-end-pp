@@ -155,6 +155,14 @@ table {
 input {
   border: 1px solid green;
 }
+html::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #1b3b28;
+}
+html::-webkit-scrollbar-thumb {
+  background: #49a010;
+}
 .form-contain {
   background-image: url(/images/leaves.jpg);
   background-size: cover;
