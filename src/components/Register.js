@@ -42,6 +42,8 @@ const Register = props => {
       </h2>  
       <h2 className='active-header'>Sign Up</h2>
     </div>
+                <h2>Welcome Back!</h2>
+                <p>Your plants missed you.  Keep track of them by turning notifications on.</p>
       <form  onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
       <input

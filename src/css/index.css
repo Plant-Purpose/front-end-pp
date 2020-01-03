@@ -170,6 +170,9 @@ table {
 .login-register .log-reg-head .active-header {
   border-bottom: 0.2rem solid green;
 }
+.login-register button {
+  margin-bottom: 1rem;
+}
 .nav {
   display: flex;
 }
@@ -749,7 +752,7 @@ table {
 }
 .add-plant .add-modal {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   height: 0%;
   width: 100%;

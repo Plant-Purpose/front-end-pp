@@ -1,5 +1,5 @@
 import React from 'react';
-import AddPlant from "../AddPlant";
+
 
 const AddPlantImage = () => {
 
@@ -11,7 +11,7 @@ const AddPlantImage = () => {
 
         modal.style.height === '0%' ? modal.style.height = '100%'
                                     : modal.style.height = '0%';
-        console.log('modal', modal, content)
+    
         if( content.style.opacity === '0') {
             setTimeout(() => {
                 content.style.opacity = '100%'

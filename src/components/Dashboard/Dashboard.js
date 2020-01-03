@@ -18,7 +18,7 @@ const Dashboard = () => {
     };
     
     return(
-        <div className='dash'>
+        <div className='dash'  style={{position: 'relative'}}>
             <div className='leftDash'>
                 <Menu/>
             </div>

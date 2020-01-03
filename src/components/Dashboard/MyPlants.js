@@ -8,10 +8,10 @@ import {Link} from "react-router-dom";
 
 const MyPlants = () => {
     const [plants, setPlants] = useState();
-    const [plantid, setPlantId] = useState({
-        id: ''
-    })
+    // const plantId = plants.plant_id;
     const userId = localStorage.getItem('uid');
+
+    
     
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const MyPlants = () => {
         .then(response => {
             console.log(response.data)
             setPlants(response.data);
-            console.log(plantid.plant_id)
+            // console.log(plantid.plant_id)
            
             // axios
             // .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
@@ -35,7 +35,7 @@ const MyPlants = () => {
         .catch(error => {
             console.log(error);
         })      
-    }, [plantid.id])
+    }, [userId])
     console.log(plants)
 
     const displayModal = (e) => {
