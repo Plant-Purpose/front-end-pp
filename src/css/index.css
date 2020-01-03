@@ -126,6 +126,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.App {
+  width: 100vw;
+}
 .nav {
   display: flex;
 }
@@ -193,10 +196,11 @@ table {
 .landing {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
 }
 .landing .landingBody {
   display: flex;
-  width: 100%;
+  width: 100vw;
   padding-left: 2rem;
   padding-right: 2rem;
   height: 38rem;
@@ -277,6 +281,7 @@ table {
   display: flex;
   background: #F8F6F5;
   height: 38rem;
+  width: 100vw;
 }
 @media (max-width:1000px) {
   .landing .landingFeatures img.sideLeaf {

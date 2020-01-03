@@ -38,6 +38,7 @@ const Login = (props) => {
                         value={user.email}
                         onChange={handleChange}
                     /> 
+
                     <p id='error-text'>{errors.email}</p>
 
                     <label htmlFor="password">P: </label>
@@ -48,6 +49,7 @@ const Login = (props) => {
                         value={user.password}
                         onChange={handleChange}
                     /> 
+                    
                     <p id='error-text'>{errors.password}</p>
 
                     <button type='submit'>Login</button>

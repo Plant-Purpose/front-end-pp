@@ -1,6 +1,5 @@
 import React from 'react';
-import axiosAuth from "../util/authAxios";
-import { validateUser } from '../util/formValidation/validateUser'
+import { validateRegistration } from '../util/formValidation/validateRegistration'
 import { useForm } from '../util/useForm';
 import axios from "axios";
 
@@ -13,21 +12,20 @@ const initialState = {
 }
 
 const Register = props => {
-
-
   const { values: user, handleChange, errors, handleSubmit } = useForm(
     initialState,
-    validateUser,
+    validateRegistration,
     submit
-)
+  )
   
   function submit() {
     console.log(user)
     axios
     .post('https://plant-purpose.herokuapp.com/api/auth/register', user)
     .then(res => {
+      console.log(res)
       localStorage.setItem('token', res.data.token)
-      props.history.push('/dashboard')
+      // props.history.push('/dashboard')
     })
     .catch(err => {
       console.dir(err)
@@ -46,14 +44,18 @@ const Register = props => {
         value={user.name}
         onChange={handleChange}
       />
+
+      <p id='error-text'>{errors.full_name}</p>
+
       <label htmlFor="email">Email: </label>
       <input
-        type='email' 
+        type='text' 
         name='email' 
         placeholder='E-mail'
         value={user.email}
         onChange={handleChange}
       />
+
       <p id='error-text'>{errors.email}</p>
 
       <label htmlFor="password">Password: </label>
@@ -64,7 +66,9 @@ const Register = props => {
         value={user.password}
         onChange={handleChange}
       />
+
       <p id='error-text'>{errors.password}</p>
+
       <label htmlFor="phone">Phone: </label>
       <input
         type='phone' 

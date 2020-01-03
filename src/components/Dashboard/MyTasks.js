@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import authAxios from "../../util/authAxios";
 
 const MyTasks = () => {
-    const [tasks, setTasks] = useState();
+    const [tasks, setTasks] = useState([]);
     
     useEffect(() => {
        authAxios()
@@ -14,7 +14,8 @@ const MyTasks = () => {
             console.log(error)
         })
         }, [tasks])
-        
+        console.log(tasks)
+
     return(
         <div>
             {tasks && tasks.length !== 0 ? tasks.map(task => {
@@ -31,7 +32,6 @@ const MyTasks = () => {
             </div> 
             }
         </div>
-
     )
 }
 export default MyTasks;

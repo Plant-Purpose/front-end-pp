@@ -33,8 +33,7 @@ const AddPlant = (props) => {
     const handleSearch = e => {
         e.preventDefault();
         plantAPI()
-        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`,
-         {"common_name": plant.common_name})
+        .get(`https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09`)
         .then(response => {
             console.log(response)
             setPlant(response.data)
