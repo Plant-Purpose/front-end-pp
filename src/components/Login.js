@@ -33,7 +33,12 @@ const Login = (props) => {
             <div className='login-register'> 
             <div className='log-reg-head'>
                 <h2 className='active-header'>Sign In</h2>  
-                <h2>Sign Up</h2>
+                <h2
+                    onClick={() => props.history.push('/register')}
+                    style={{ cursor: 'pointer' }}
+                >
+                    Sign Up
+                </h2>
             </div>
                 <form onSubmit={handleSubmit}>
 

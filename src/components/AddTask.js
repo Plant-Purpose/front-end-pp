@@ -5,18 +5,21 @@ const AddTask = (props) => {
     const [task, setTask] = useState('');
     const uid = localStorage.getItem('uid');
     const onChangeHandler = (e, setCB) => {
-        e.preventDefault();
-        setCB(e.target.value)
+         setCB(e.target.value)
     }
-    const onSubmit = e => {
 
+    const onSubmit = e => {
+        e.preventDefault();
+    
         const new_task = {
+            user_id: localStorage.getItem('uid'),
             title,
             task,
             deadline: '1/4/2014',
             created_at: Date.now()
         }
-        authAxios().post(`https://plant-purpose-staging.herokuapp.com/api/users/${uid}/tasks`, new_task)
+
+        authAxios().post(`https://plant-purpose.herokuapp.com/api/users/${uid}/tasks`, new_task)
                  .then(res => {
                      console.log(res)
                  })
@@ -24,22 +27,22 @@ const AddTask = (props) => {
                      console.log(err)
                  });
     }
-    console.log('--title', title, '--test--', task)
+
  return(
-     <div className='inner-task-box'>
+     <form className='inner-task-box' onSubmit={onSubmit}>
          <h3>Add Task</h3>
          <input type="text"
                 name="title"
                 placeholder="Enter Title"
-                onChange={() => onChangeHandler(setTitle)}
+                onChange={(e) => onChangeHandler(e, setTitle)}
          />
          <textarea type="text" 
                     name="task" 
                     placeholder="Enter Task"
-                    onChange={() => onChangeHandler(setTask)}
+                    onChange={(e) => onChangeHandler(e, setTask)}
         />
          <button className='button' type='submit'>Save Task</button>
-     </div>
+     </form>
  )
 }
 export default AddTask;

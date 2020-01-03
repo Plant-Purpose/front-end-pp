@@ -12,13 +12,17 @@ const MyPlants = () => {
         id: ''
     })
     const userId = localStorage.getItem('uid');
+    
 
     useEffect(() => {
+        
         authAxios()
-        .get(`api/users/${userId}/plants`)
+        .get(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants`)
         .then(response => {
-            console.log(response)
-            setPlantId(response.data);
+            console.log(response.data)
+            setPlants(response.data);
+            console.log(plantid.plant_id)
+           
             // axios
             // .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
             // .then(response => {
@@ -54,19 +58,19 @@ const MyPlants = () => {
 
     return(
         <div className="myPlants">
-
+            <h2>My Plants</h2>
             {plants && plants.length !==0 ? plants.map(plant => {
+                
                 return(
-                    <div className="plantCard" >
-                        <h2>My Plants</h2>
+                    <div className="plantCard" >                        
                         <img src="" alt=''/>
-                        <p>{plant}</p>                        
+                        <p>{plant.plant_id}</p>                        
                     </div>
 
                 )
             }): 
             <div className="add-plant" >
-                <h2>My Plants</h2>
+                
                 <button className='button' onClick={e => displayModal(e)}>Add Plant</button>
 
                 <div className="add-modal" id="add-modal">
