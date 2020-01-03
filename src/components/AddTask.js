@@ -9,7 +9,7 @@ const AddTask = (props) => {
         setCB(e.target.value)
     }
     const onSubmit = e => {
-        e.preventDefault();
+
         const new_task = {
             title,
             task,

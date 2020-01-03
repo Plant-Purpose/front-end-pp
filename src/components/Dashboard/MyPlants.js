@@ -32,6 +32,7 @@ const MyPlants = () => {
             console.log(error);
         })      
     }, [plantid.id])
+    console.log(plants)
 
     const displayModal = (e) => {
         e.preventDefault();
