@@ -15,17 +15,18 @@ const MyPlants = () => {
 
     useEffect(() => {
         authAxios()
-        .get('api/users/:id/plants')
+        .get(`api/users/${userId}/plants`)
         .then(response => {
+            console.log(response)
             setPlantId(response.data);
-            axios
-            .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
-            .then(response => {
-                setPlants(response.data)
-            })
-            .catch(error => {
-                console.dir(error);
-            })
+            // axios
+            // .get('https://trefle.io/api/plants?token=elpiZ21wT1JXZFVzemlubmx0VlRJZz09', {"id": plantid.id})
+            // .then(response => {
+            //     setPlants(response.data)
+            // })
+            // .catch(error => {
+            //     console.dir(error);
+            // })
         })
         .catch(error => {
             console.log(error);

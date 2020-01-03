@@ -30,7 +30,11 @@ const Login = (props) => {
     };
 
         return (
-            <div>
+            <div className='login-register'> 
+            <div className='log-reg-head'>
+                <h2 className='active-header'>Sign In</h2>  
+                <h2>Sign Up</h2>
+            </div>
                 <form onSubmit={handleSubmit}>
 
                     <label htmlFor="email">Email: </label>

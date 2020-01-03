@@ -32,8 +32,11 @@ const Register = props => {
   }
 
   return (
-    <>    
-      <h1> Register </h1>
+    <div className='login-register'>  
+    <div className='log-reg-head'>
+      <h2>Sign In</h2>  
+      <h2 className='active-header'> Sign Up </h2>
+    </div>
       <form  onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
       <input
@@ -90,7 +93,7 @@ const Register = props => {
 
       <button className='button' type='submit'> Register </button>
       </form>
-    </>
+    </div>
   )
 }
 

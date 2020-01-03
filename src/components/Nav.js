@@ -14,6 +14,16 @@ const Nav = props => {
         e.preventDefault();
         props.history.push('/')
     }
+
+    const signInForm = e => {
+        e.preventDefault()
+        props.history.push('/')
+    }
+
+    const signUpForm = e => {
+        e.preventDefault()
+        props.history.push('/')
+    }
     return(
         <div className='nav'>
 

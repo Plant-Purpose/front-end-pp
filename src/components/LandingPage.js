@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const LandingPage = (props) => {
+const LandingPage = props => {
 
   return (
     <div className='landing'>

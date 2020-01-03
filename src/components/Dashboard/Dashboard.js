@@ -19,24 +19,19 @@ const Dashboard = () => {
     
     return(
         <div className='dash'>
-            
             <div className='leftDash'>
                 <Menu/>
             </div>
-
             <div className='middleDash'>
                 <Notification/>
                 <MyPlants/>
                 <MyTasks/>
             </div>
-            
-
             <div className='rightDash'>
-
             <Calendar
             type='date'
             name='date'
-            value={date.date}
+            // value={date.date}
             onChange={handleChange}
             className="calendar"
             />

@@ -5,7 +5,7 @@ import axios from "axios";
 
 import AddTask from "./AddTask"
 
-const AddPlant = (props) => {
+const AddPlant = props => {
     const [plant, setPlant] = useState({
         plant_id: '',
         created_at: Date.now(),
@@ -52,7 +52,7 @@ const AddPlant = (props) => {
                 <h2>Add a Plant</h2>
                 <div className='search'>
                     <input className='find-plant' type='text' name="common_name" placeholder="Find Plant" onChange={handleInput} />
-                    <i class="icon-search" aria-hidden="true"></i>
+                    <i className="icon-search" aria-hidden="true"></i>
                 </div>
             </form>
             <div className='task-box'>
