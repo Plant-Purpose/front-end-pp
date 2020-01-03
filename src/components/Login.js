@@ -17,7 +17,7 @@ const Login = (props) => {
 
     function submit() {
         axios
-        .post('https://plant-purpose.herokuapp.com/api/login', user)
+        .post('https://plant-purpose.herokuapp.com/api/auth/login', user)
         .then(response => {
             console.log(response)
             localStorage.setItem('token', response.data.token);
