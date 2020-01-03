@@ -8,7 +8,7 @@ import AddTask from "./AddTask"
 const AddPlant = props => {
     const [plant, setPlant] = useState({
         user_id: Number(localStorage.getItem('uid')),
-        plant_id: '',
+        plant_id: 167110,
         created_at: Date.now(),
     })    
     const userId = localStorage.getItem('uid')

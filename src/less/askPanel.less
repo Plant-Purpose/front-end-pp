@@ -1,0 +1,26 @@
+.task-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+
+    background-color: #CBEAD1;
+    padding: 20px;
+
+    opacity: 0;
+    z-index: -100000000000000;
+    transition: opacity 600ms ease;
+}
+
+.dark {
+    background-color: #CBEAD1;
+}
+
+.show {
+    opacity: 100;
+    z-index: 1;
+}
+
+.tasks {
+    transition: background-color 500ms ease;
+}

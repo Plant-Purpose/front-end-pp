@@ -4,6 +4,7 @@ import plantAPI from "../../../src/util/plantapi.js";
 import AddPlant from '../AddPlant';
 import axios from "axios";
 import {Link} from "react-router-dom";
+import MyPlantsCard from "../MyPlantsCard";
 
 
 const MyPlants = () => {
@@ -11,6 +12,17 @@ const MyPlants = () => {
     const [plantIDs, setPlantIDs] = useState([]);
     // const plantId = plants.plant_id;
     const userId = localStorage.getItem('uid');
+    console.log("plants", plants)
+
+    const deleteHandler = () => {
+        axios.delete(`https://plant-purpose.herokuapp.com/api/users/${userId}/plants/${plants.id}`)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    }
 
     
     
@@ -25,7 +37,7 @@ const MyPlants = () => {
             });
             console.log('ids', IDS)
             const allPlants = await Promise.all(IDS);
-            console.log(allPlants)
+            console.log("allPlants",allPlants)
             setPlants(allPlants)
         })
         .catch(error => {
@@ -57,20 +69,15 @@ const MyPlants = () => {
             <h2>My Plants</h2>
             <div className='plantContainer'>
             {plants && plants.length !==0 ? plants.map(plant => {
-                console.log(plant)
                 return(
-                plant.data.images && plant.data.images.length !==0 ?                 
-                    <div className="plantCard" key={plant.data.id}>
-                        <img src={ plant.data.images.length > 0 ? plant.data.images[0].url : ""} alt={plant.data.common_name}/>
-                        <h3>{plant.data.name}</h3>
-                        <p>{plant.data.plant_id}</p>                        
-                    </div>: null
-                )}): 
-                
-            <div className="add-plant" >
-                
-                <button className='button' onClick={e => displayModal(e)}>Add Plant</button>
+                    plant.data.images && plant.data.images.length !==0 ?                
+                    <MyPlantsCard plant={plant} deleteHandler={deleteHandler}/>:<button className='button' onClick={e => displayModal(e)}>Add Plant</button>
+            )}): null
+           
+            }    
+            </div>
 
+            <div className="add-plant" >
                 <div className="add-modal" id="add-modal">
                     <div className="modal-content">
                         <div className="close" onClick={displayModal}>&times;</div>
@@ -85,10 +92,9 @@ const MyPlants = () => {
                         </div>
                     </div>
                 </div>
-            </div>            
-    }
             </div>
-        </div>
+                      
+    </div>
     )
 }
 export default MyPlants;

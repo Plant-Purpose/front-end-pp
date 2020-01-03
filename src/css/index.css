@@ -130,6 +130,9 @@ table {
   width: 100vw;
   text-align: center;
 }
+.App input {
+  border: 1px solid green;
+}
 #error-text {
   color: red;
   font-weight: bold;
@@ -152,20 +155,18 @@ table {
   border-radius: 4px;
   margin: auto;
 }
-input {
-  border: 1px solid green;
+.log-reg-contain {
+  height: 85vh;
+  overflow: hidden;
 }
-.login-register {
+.log-reg-contain .login-register {
   font-family: 'Poppins';
   background-color: #f1f1f1;
   width: 30vw;
-  margin: 0 auto;
+  margin: 5rem auto 0;
   padding-bottom: 1rem;
 }
-.login-register input {
-  border: 1px solid green;
-}
-.login-register .log-reg-head {
+.log-reg-contain .login-register .log-reg-head {
   display: flex;
   justify-content: space-around;
   background-color: lightgray;
@@ -175,33 +176,33 @@ input {
   font-weight: 500;
   font-size: 1.5rem;
 }
-.login-register .log-reg-head h2 {
+.log-reg-contain .login-register .log-reg-head h2 {
   padding-top: 0.9rem;
 }
-.login-register .log-reg-head .active-header {
+.log-reg-contain .login-register .log-reg-head .active-header {
   border-bottom: 0.2rem solid green;
 }
-.login-register .log-reg-desc {
+.log-reg-contain .login-register .log-reg-desc {
   padding: 0 3rem;
 }
-.login-register .log-reg-desc h2 {
+.log-reg-contain .login-register .log-reg-desc h2 {
   font-size: 1.5rem;
   font-weight: bolder;
   margin: 2rem 0;
 }
-.login-register .log-reg-desc p {
+.log-reg-contain .login-register .log-reg-desc p {
   margin-bottom: 3rem;
 }
 @media (max-width:1000px) {
-  .login-register {
+  .log-reg-contain .login-register {
     width: 70vw;
   }
-  .login-register input {
+  .log-reg-contain .login-register input {
     min-width: 50%;
   }
 }
 @media (max-width:500px) {
-  .login-register {
+  .log-reg-contain .login-register {
     width: 70vw;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -209,12 +210,12 @@ input {
 }
 .nav {
   display: flex;
+  height: 8vh;
 }
 .nav .mainNav {
   width: 50%;
   display: flex;
-  margin-left: 2rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 2rem 0;
 }
 .nav .mainNav img {
   justify-content: flex-start;
@@ -225,7 +226,7 @@ input {
   align-items: center;
   justify-content: center;
   justify-content: flex-end;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 .nav .nav-container .loggedInButts {
   display: flex;
@@ -713,6 +714,7 @@ input {
   border: 1px solid #F8F6F5;
   box-sizing: border-box;
   border-radius: 4px;
+  height: 350px;
   width: 100%;
   margin: 1%;
   overflow: hidden;
@@ -728,22 +730,23 @@ input {
 .dash .middleDash .myPlants .plantContainer .plantCard {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 2%;
 }
 .dash .middleDash .myPlants .plantContainer .plantCard img {
   width: 150px;
   height: 150px;
 }
-.dash .middleDash .myPlants .plantContainer h2 {
+.dash .middleDash .myPlants .plantContainer .plantCard h2 {
   text-align: left;
   margin: 3% 5%;
 }
 @media (max-width:500px) {
-  .dash .middleDash .myPlants .plantContainer {
+  .dash .middleDash .myPlants .plantContainer .plantCard {
     height: fit-content;
   }
 }
-.dash .myTasks {
+.dash .middleDash .myTasks {
   display: flex;
   flex-direction: column;
   font-family: Poppins;
@@ -756,15 +759,16 @@ input {
   width: 100%;
   margin: 1%;
 }
-.dash .myTasks h2 {
+.dash .middleDash .myTasks h2 {
   font-weight: bold;
   text-align: left;
   margin: 2%;
 }
-.dash .myTasks .taskContainer {
+.dash .middleDash .myTasks .taskContainer {
   width: 90%;
+  margin-left: 2%;
 }
-.dash .myTasks .taskContainer .taskCard {
+.dash .middleDash .myTasks .taskContainer .taskCard {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -774,19 +778,19 @@ input {
   height: 100px;
   margin: 1%;
 }
-.dash .myTasks .taskContainer .taskCard h2 {
+.dash .middleDash .myTasks .taskContainer .taskCard h2 {
   font-size: 1.2rem;
   font-weight: bold;
 }
-.dash .myTasks .taskContainer .taskCard p {
+.dash .middleDash .myTasks .taskContainer .taskCard p {
   font-size: 0.8rem;
 }
 @media (max-width:500px) {
-  .dash .myTasks .taskContainer .taskCard {
+  .dash .middleDash .myTasks .taskContainer .taskCard {
     height: fit-content;
   }
 }
-.rightDash {
+.dash .rightDash {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -796,24 +800,24 @@ input {
   height: 900px;
 }
 @media (max-width:1000px) {
-  .rightDash {
+  .dash .rightDash {
     width: 20%;
   }
 }
 @media (max-width:500px) {
-  .rightDash {
+  .dash .rightDash {
     width: 100%;
   }
 }
-.rightDash .calendar {
+.dash .rightDash .calendar {
   margin-bottom: 10%;
 }
 @media (max-width:500px) {
-  .rightDash .calendar {
+  .dash .rightDash .calendar {
     margin: auto;
   }
 }
-.rightDash .addPlant {
+.dash .rightDash .addPlant {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -823,11 +827,11 @@ input {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.rightDash .addPlant .plusSign {
+.dash .rightDash .addPlant .plusSign {
   margin: 5%;
 }
 @media (max-width:1240px) {
-  .rightDash .addPlant {
+  .dash .rightDash .addPlant {
     width: 100%;
   }
 }
@@ -853,7 +857,7 @@ input {
   cursor: pointer;
 }
 .add-plant .add-modal .modal-content {
-  opacity: 0;
+  opacity: 0.01;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -943,4 +947,25 @@ input {
 }
 .task-box .inner-task-box textarea {
   max-width: 200px;
+}
+.task-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  background-color: #CBEAD1;
+  padding: 20px;
+  opacity: 0;
+  z-index: -100000000000000;
+  transition: opacity 600ms ease;
+}
+.dark {
+  background-color: #CBEAD1;
+}
+.show {
+  opacity: 100;
+  z-index: 1;
+}
+.tasks {
+  transition: background-color 500ms ease;
 }

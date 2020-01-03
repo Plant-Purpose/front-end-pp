@@ -12,7 +12,6 @@ const Dashboard = () => {
 
 	const handleChange = value => setDate([value]);
     
-    console.log("date", date)
     return(
         <div className='dash'  style={{position: 'relative'}}>
             <div className='leftDash'>

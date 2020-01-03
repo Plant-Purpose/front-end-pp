@@ -1,7 +1,15 @@
 import React from 'react';
+import AddTaskPanel from '../AddTaskPanel';
 
 const Menu = () => {
-  
+  const toggleTaskPanel = (e) => {
+    e.stopPropagation()
+    const panel = document.querySelector('.task-panel');
+    const menu = document.querySelector('.tasks');
+
+    menu.classList.toggle('dark');
+    panel.classList.toggle('show');
+  }
 
   return (
     <>
@@ -13,7 +21,10 @@ const Menu = () => {
       <div className="menu">
         <div className="dashboard"> <img src='images/Menu/dashboard.svg' alt='dashboard'/> Dashboard </div>
         <div className="plants"> <img src='images/Menu/myplants.svg'alt='leaf'/> My Plants </div>
-        <div className="tasks"> <img src='images/Menu/tasks.svg' alt='task'/> Tasks </div>
+        
+        <div className="tasks" style={{ position: 'relative', cursor: 'pointer' }} onClick={e => toggleTaskPanel(e)}><img src='images/Menu/tasks.svg' alt='task'/> Tasks</div>
+        <AddTaskPanel /> 
+
         <div className="notes"> <img src='images/Menu/notes.svg' alt='notes'/> Notes </div>
         
       </div>

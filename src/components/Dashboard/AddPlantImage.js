@@ -8,17 +8,19 @@ const AddPlantImage = () => {
 
         const modal = document.querySelector('#add-modal');
         const content = document.querySelector('.modal-content');
+        console.log(modal, content)
+        if(modal && modal.style) {
+            modal.style.height === '0%' ? modal.style.height = '100%'
+                                        : modal.style.height = '0%';
 
-        modal.style.height === '0%' ? modal.style.height = '100%'
-                                    : modal.style.height = '0%';
-    
-        if( content.style.opacity === '0') {
-            setTimeout(() => {
-                content.style.opacity = '100%'
-            }, 200);
-        } else {
-            content.style.opacity = '0';
-        }
+            if( content.style.opacity === '0') {
+                setTimeout(() => {
+                    content.style.opacity = '100%'
+                }, 200);
+            } else {
+                content.style.opacity = '0';
+            }
+        } 
     }
     
     return (
