@@ -3,10 +3,11 @@ import authAxios from "../../util/authAxios";
 
 const MyTasks = () => {
     const [tasks, setTasks] = useState([]);
+    const userId = localStorage.getItem('uid');
     
     useEffect(() => {
        authAxios()
-       .get('api/users/:id/tasks')
+       .get(`api/users/${userId}/tasks`)
        .then(response => {
         setTasks(response.data)
         })

@@ -10,16 +10,16 @@ const Notification =() => {
         notes: []
     });
 
-    useEffect(() => {
-        authAxios()
-        .get('')
-        .then(response => {
-            setNotification(response.data);
-        })
-        .catch(error => {
-            console.log(error)
-        })
-    }, [notification])         
+    // useEffect(() => {
+    //     authAxios()
+    //     .get('')
+    //     .then(response => {
+    //         setNotification(response.data);
+    //     })
+    //     .catch(error => {
+    //         console.log(error)
+    //     })
+    // }, [notification])         
                 
                 
     return(

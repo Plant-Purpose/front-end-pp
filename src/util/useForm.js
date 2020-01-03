@@ -13,7 +13,6 @@ export const useForm = (initialState, validate, callback) => {
 	};
 
 	const handleSubmit = event => {
-		console.log('submit function')
 		event.preventDefault();
 		setErrors(validate(values));
 		callback()

@@ -5,7 +5,7 @@ import MyPlants from "./MyPlants";
 import MyTasks from "./MyTasks";
 import Menu from "./Menu";
 import Notification from "./Notification";
-import AddPlant from "./AddPlant"
+import AddPlantImage from "./AddPlantImage"
 
 const Dashboard = () => {
     const [date, setDate] = useState({ date: '' })
@@ -41,7 +41,7 @@ const Dashboard = () => {
             className="calendar"
             />
 
-            <AddPlant/>
+            <AddPlantImage/>
 
             </div>
         </div>

@@ -19,7 +19,9 @@ const Login = (props) => {
         axios
         .post('https://plant-purpose.herokuapp.com/api/auth/login', user)
         .then(response => {
+            console.log(response)
             localStorage.setItem('token', response.data.token);
+            localStorage.setItem('uid', response.data.id);
             props.history.push('/dashboard');
         })
         .catch(error => {
@@ -31,7 +33,7 @@ const Login = (props) => {
             <div>
                 <form onSubmit={handleSubmit}>
 
-                    <label htmlFor="email">E: </label>
+                    <label htmlFor="email">Email: </label>
                     <input 
                         type="text" 
                         name="email" 
@@ -42,7 +44,7 @@ const Login = (props) => {
 
                     <p id='error-text'>{errors.email}</p>
 
-                    <label htmlFor="password">P: </label>
+                    <label htmlFor="password">Password: </label>
                     <input 
                         type="password" 
                         name="password" 

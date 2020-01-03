@@ -11,6 +11,7 @@ const AddPlant = (props) => {
         created_at: Date.now(),
         common_name: ''
     })    
+    const userId = localStorage.getItem('uid')
 
     const handleInput = e => {
         setPlant({
@@ -22,7 +23,7 @@ const AddPlant = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         authAxios()
-        .post('api/users/:id/plants', plant)
+        .post(`api/users/${userId}/plants`, plant)
         .then(response => {
             console.log(response)
             // props.history.push('/dashboard')

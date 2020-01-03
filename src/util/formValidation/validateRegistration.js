@@ -17,5 +17,9 @@ export const validateRegistration = values => {
         errors.password = 'Password must contain at least 7 characters'
     }
 
+    if (values.phone.length  && /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/) {
+        errors.phone = 'Please enter a valid phone number'
+    }
+
     return errors
 }

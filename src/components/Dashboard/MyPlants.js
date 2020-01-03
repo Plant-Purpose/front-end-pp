@@ -11,6 +11,7 @@ const MyPlants = () => {
     const [plantid, setPlantId] = useState({
         id: ''
     })
+    const userId = localStorage.getItem('uid');
 
     useEffect(() => {
         authAxios()

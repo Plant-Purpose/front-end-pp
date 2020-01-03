@@ -1,19 +1,34 @@
 import React from 'react'
 
 
-const Nav = (props) => {
+const Nav = props => {
     const logout = e => {
         e.preventDefault();
         localStorage.removeItem('token');
         props.history.push('/')
     }
-    const signedIn = localStorage.getItem('token');    
+
+    const signedIn = localStorage.getItem('token'); 
+    
+    const home = e => {
+        e.preventDefault();
+        props.history.push('/')
+    }
     return(
         <div className='nav'>
 
             <div className='mainNav'>
-                <img src="images/Nav/leaf.svg" alt="leaf logo"/>
-                <img src='images/Nav/Plant_Purpose.svg' alt="plant purpose text"/>
+                <img 
+                    src="images/Nav/leaf.svg" 
+                    alt="leaf logo" 
+                    onClick={home} 
+                    style={{ cursor: 'pointer' }}
+                />
+                <img 
+                    src='images/Nav/Plant_Purpose.svg' 
+                    alt="plant purpose text" 
+                    onClick={home} 
+                />
             </div>
 
             <div className='nav-container'>

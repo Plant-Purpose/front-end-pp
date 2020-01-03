@@ -19,7 +19,6 @@ const Register = props => {
   )
   
   function submit() {
-    console.log(user)
     axios
     .post('https://plant-purpose.herokuapp.com/api/auth/register', user)
     .then(res => {
@@ -71,12 +70,15 @@ const Register = props => {
 
       <label htmlFor="phone">Phone: </label>
       <input
-        type='phone' 
+        type='text' 
         name='phone' 
         placeholder='Phone'
         value={user.phone}
         onChange={handleChange}
       />
+
+      <p id='error-text'>{errors.phone}</p>
+
        <label htmlFor="location">Location: </label>
       <input
         type='text' 
