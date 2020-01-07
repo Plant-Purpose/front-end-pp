@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import authAxios from "../util/authAxios";
+import MyTasks from './Dashboard/MyTasks';
 
 const AddTaskPanel = () => {
     const [title, setTitle] = useState('');
@@ -25,6 +26,7 @@ const AddTaskPanel = () => {
         authAxios().post(`https://plant-purpose.herokuapp.com/api/users/${uid}/tasks`, new_task)
                  .then(res => {
                      console.log(res)
+                     window.location.reload() 
                  })
                  .catch(err => {
                      console.log(err)
@@ -33,21 +35,8 @@ const AddTaskPanel = () => {
     
 
     return (
-        <div className="task-panel">
-            <form className='inner-task-box' onSubmit={onSubmit}>
-                <h3>Add Task</h3>
-                <input type="text"
-                    name="title"
-                    placeholder="Enter Title"
-                    onChange={(e) => onChangeHandler(e, setTitle)}
-                />
-                <textarea type="text" 
-                        name="task" 
-                        placeholder="Enter Task"
-                        onChange={(e) => onChangeHandler(e, setTask)}
-                />
-                <button className='button' type='submit'>Save Task</button>
-            </form>
+        <div className="task-panel">   
+            <MyTasks />
         </div>
     )
 }

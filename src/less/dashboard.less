@@ -311,3 +311,53 @@
 		}
 	}
 }
+
+.task-panel {
+	.myTasks {
+		display: flex;
+		flex-direction: column;
+		font-family: Poppins;
+		line-height: 2.7rem;
+		background: #ffffff;
+		border: 1px solid #f8f6f5;
+		box-sizing: border-box;
+		border-radius: 4px;
+		height: 250px;
+		width: 100%;
+		margin: 1%;
+		overflow-y: scroll;
+
+		h2 {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: left;
+			margin: 2%;
+		}
+		.taskContainer {
+			width: 90%;
+			margin-left: 2%;
+
+			.taskCard {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				border: 1px solid #f8f6f5;
+				background: #f8f9fa;
+				border-radius: 4px;
+				height: 100px;
+				margin: 1%;
+
+				h2 {
+					font-size: 1.2rem;
+					font-weight: bold;
+				}
+				p {
+					font-size: 0.8rem;
+				}
+				@media @small {
+					height: fit-content;
+				}
+			}
+		}
+	}
+}

@@ -61,7 +61,7 @@ const AddPlant = props => {
     return(
         <div className='add-container'>
             <form onSubmit={handleSubmit} className='add-form'>
-                <h2>Add a Plant</h2>
+                <h2 style={{ marginLeft: "15px" }}>Add a Plant</h2>
                 <div className='search'>
                     <select className='find-plant' type='text' name="common_name" placeholder="Find Plant" onChange={handleInput}> 
                         <option value="167110">Hybrid Pine</option>
