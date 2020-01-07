@@ -10,7 +10,7 @@ const AddPlantImage = () => {
 
 		if (modal && modal.style) {
 			modal.style.height === '0%'
-				? (modal.style.height = '100%')
+				? (modal.style.height = '70%')
 				: (modal.style.height = '0%');
 
 			if (content.style.opacity === '0') {

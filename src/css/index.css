@@ -849,6 +849,59 @@ html {
     display: none;
   }
 }
+.task-panel .myTasks {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  line-height: 2.7rem;
+  background: #ffffff;
+  border: 1px solid #f8f6f5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 250px;
+  width: 100%;
+  margin: 1%;
+  overflow-y: scroll;
+}
+.task-panel .myTasks h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin: 2%;
+}
+.task-panel .myTasks .taskContainer {
+  width: 90%;
+  margin-left: 2%;
+}
+.task-panel .myTasks .taskContainer .taskCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #f8f6f5;
+  background: #f8f9fa;
+  border-radius: 4px;
+  height: 100px;
+  margin: 1%;
+}
+.task-panel .myTasks .taskContainer .taskCard h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.task-panel .myTasks .taskContainer .taskCard p {
+  font-size: 0.8rem;
+}
+@media (max-width:500px) {
+  .task-panel .myTasks .taskContainer .taskCard {
+    height: fit-content;
+  }
+}
+.app-wrap {
+  overflow-y: hidden;
+}
+.rightDash {
+  overflow-y: hidden;
+  height: 100vh;
+}
 .add-modal {
   position: absolute;
   bottom: 0;
@@ -992,16 +1045,19 @@ html {
 }
 .task-panel {
   position: absolute;
-  top: 36.1%;
-  left: 21%;
-  background-color: #CBEAD1;
+  top: 26px;
+  right: 24%;
+  background-color: #f8f6f5;
   padding: 20px;
   opacity: 0;
   z-index: -100000000000000;
   transition: opacity 600ms ease;
+  height: 258px;
+  width: 100%;
+  max-width: 700px;
 }
 .dark {
-  background-color: #CBEAD1;
+  background-color: #f8f6f5;
 }
 .show {
   opacity: 100;
