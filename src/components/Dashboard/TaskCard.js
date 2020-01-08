@@ -10,7 +10,6 @@ const TaskCard = props => {
 
         setEdit(!edit);
     }
-    console.log('lop', updatedTask);
 
     const onChangeHandler = e => {
         e.preventDefault();
@@ -30,7 +29,6 @@ const TaskCard = props => {
 
         axios.put(`https://plant-purpose.herokuapp.com/api/users/${userId}/tasks/${props.task.id}`, updatedTask)
         .then(res => {
-            console.log(res)
             window.location.reload();
         })
         .catch(err => {
@@ -54,7 +52,7 @@ const TaskCard = props => {
             { edit ? <input type='text' name="title" onChange={e => onChangeHandler(e)} placeholder="Title..." /> : <h2>{props.task.title}</h2>}
             { edit ? <input type='text' name="task" onChange={e => onChangeHandler(e)} placeholder="Task..." /> : <p>{props.task.task}</p>}
             { edit ? <input type='text' name="deadline" onChange={e => onChangeHandler(e)} placeholder="Deadline..." /> : <p>Due By: {props.task.deadline}</p>}
-            { edit ? <button className='button' onClick={e => editTask(e)}>Save Changes</button> :  <p style={{ cursor: 'pointer' }} onClick={deleteHandler}><img src='images/trash-solid.svg' width="20px" alt="trash"/></p>}
+            { edit ? <button className='button' onClick={e => editTask(e)}>Save</button> :  <p style={{ cursor: 'pointer' }} onClick={deleteHandler}><img src='images/trash-solid.svg' width="20px" alt="trash"/></p>}
             
             <p style={{ cursor: 'pointer' }} onClick={editToggle}><img src='images/edit.svg' alt="edit"/></p>
         </div>

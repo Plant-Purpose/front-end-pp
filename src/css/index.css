@@ -895,6 +895,15 @@ html {
     height: fit-content;
   }
 }
+.taskCard input {
+  width: 100%;
+  max-width: 100px;
+  margin-left: 10px;
+}
+.taskCard button {
+  margin: 0;
+  margin-bottom: 10px;
+}
 .app-wrap {
   overflow-y: hidden;
 }
